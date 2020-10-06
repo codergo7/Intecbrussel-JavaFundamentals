@@ -1,4 +1,4 @@
-package whileloop;
+package be.intecbrussel.whileloop;
 
 public class Assignment16_3 {
     public static void main(String[] args) {

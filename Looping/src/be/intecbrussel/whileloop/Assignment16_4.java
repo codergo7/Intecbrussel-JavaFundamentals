@@ -1,12 +1,12 @@
-package whileloop;
+package be.intecbrussel.whileloop;
 
 public class Assignment16_4 {
     public static void main(String[] args) {
         char letter = 'A';
-        int counter =0;
 
-        while(counter++<26){
-            System.out.println((char)letter++);
+
+        while(letter<='Z'){
+            System.out.println(letter++);
         }
     }
 }
