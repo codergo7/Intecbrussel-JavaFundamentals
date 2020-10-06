@@ -3,6 +3,8 @@ package be.intecbrussel.excercises;
 public class Excercise17_09 {
     public static void main(String[] args) {
 
+        int counter =0;
+
         for(int i=2; i<=1000;i++){
             boolean isPrime = true;
 
@@ -15,7 +17,10 @@ public class Excercise17_09 {
 
             if (isPrime){
                 System.out.println(i);
+                counter++;
             }
         }
+        System.out.println("Number of prime numbers between 0 and 1000: " + counter);
+
     }
 }
