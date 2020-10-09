@@ -1,4 +1,4 @@
-package be.intecbrussel.excercises;
+package be.intecbrussel.forloop_excercises;
 
 public class Excercise17_01 {
     public static void main(String[] args) {

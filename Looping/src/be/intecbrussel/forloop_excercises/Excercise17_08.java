@@ -1,15 +1,15 @@
-package be.intecbrussel.excercises;
+package be.intecbrussel.forloop_excercises;
 
-public class Excercise17_09 {
+public class Excercise17_08 {
     public static void main(String[] args) {
         //long start1 = System.currentTimeMillis();
         long start1 = System.nanoTime();
         printPrimeNumbers();
-        long finih1 = System.nanoTime();;
+        long finih1 = System.nanoTime();
 
-        long start2 = System.nanoTime();;
+        long start2 = System.nanoTime();
         printPrimeNumbers2();
-        long finish2 = System.nanoTime();;
+        long finish2 = System.nanoTime();
 
         System.out.println("printPrimeNumbers : " + (finih1 - start1));
         System.out.println("printPrimeNumbers2: " + (finish2 - start2));
