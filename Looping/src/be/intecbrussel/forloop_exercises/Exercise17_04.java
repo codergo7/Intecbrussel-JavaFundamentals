@@ -1,6 +1,6 @@
-package be.intecbrussel.forloop_excercises;
+package be.intecbrussel.forloop_exercises;
 
-public class Excercise17_04 {
+public class Exercise17_04 {
     public static void main(String[] args) {
         for (char i = 'z'; i >= 'a'; i--) {
             System.out.println(i);

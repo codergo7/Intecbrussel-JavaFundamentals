@@ -1,6 +1,6 @@
-package be.intecbrussel.forloop_excercises;
+package be.intecbrussel.forloop_exercises;
 
-public class Excercise17_06 {
+public class Exercise17_06 {
     public static void main(String[] args) {
 
        /* for(int i = -10; i<=10;i++){
