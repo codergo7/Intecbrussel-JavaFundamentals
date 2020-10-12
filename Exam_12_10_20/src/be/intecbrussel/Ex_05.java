@@ -27,5 +27,7 @@ public class Ex_05 {
         }
 
         System.out.println("Uw lidgeld is " + (fee > 2.5 ? fee : 2.5) + " Euros");
+
+        scanner.close();
     }
 }

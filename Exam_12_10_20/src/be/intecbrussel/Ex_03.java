@@ -20,6 +20,8 @@ public class Ex_03 {
             nettoloon = brutoloon - brutoloon*27/100;
         }
         System.out.println("Nettoloon: " + nettoloon);
+
+        scanner.close();
     }
 
 

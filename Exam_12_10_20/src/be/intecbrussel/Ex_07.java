@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class Ex_07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Punt van Wiskunde (1-10): ");
+        System.out.println("Point of Math (1-10): ");
         int pointOfMath = scanner.nextInt();
-        System.out.println("Punt van Boekhouden (1-10): ");
+        System.out.println("Point of Accounting (1-10): ");
         int pointOfAccounting = scanner.nextInt();
-        System.out.println("Punt van Informatica (1-10): ");
+        System.out.println("Point of Computer Science (1-10): ");
         int pointOfComputerScience = scanner.nextInt();
 
-        String note = "Proficiaat. U bent geslaagd";
+        String note = "You are successful";
 
         if(pointOfMath<6){
-        note = "U bent niet geslaagd. Omdat punt van wiskunde minder dan 6 is.";
+        note = "You are not successful. Because point of math is less than 6.";
         }
         if((pointOfAccounting + pointOfComputerScience)<12){
-            note = "U bent niet geslaagd. Omdat total punten van Informatica en Boekhouden minder dan 12" + (pointOfMath<6? "en punt van wiskunde minder dan 6":"") + " zijn.";
+            note = "You are not successful. Because total point of Computer Science and Accounting are less than 12" + (pointOfMath<6? "and point of math is less than 6.":"");
         }
 
         System.out.println(note);

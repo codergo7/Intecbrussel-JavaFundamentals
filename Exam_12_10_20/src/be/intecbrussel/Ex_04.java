@@ -6,38 +6,38 @@ import java.util.SortedMap;
 public class Ex_04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number please:  ");
-        int number = scanner.nextInt();
+        System.out.println("Enter an amount please:  ");
+        int amount = scanner.nextInt();
         int fiveHundred = 0, twoHundred = 0, hundred = 0, fifty = 0, twenty = 0, ten = 0, five = 0, two = 0, one = 0;
 
-        while (number > 0) {
+        while (amount > 0) {
 
-            if (number >= 500) {
-                number -= 500;
+            if (amount >= 500) {
+                amount -= 500;
                 fiveHundred++;
-            } else if (number >= 200) {
-                number -= 200;
+            } else if (amount >= 200) {
+                amount -= 200;
                 twoHundred++;
-            } else if (number >= 100) {
-                number -= 100;
+            } else if (amount >= 100) {
+                amount -= 100;
                 hundred++;
-            } else if (number >= 50) {
-                number -= 50;
+            } else if (amount >= 50) {
+                amount -= 50;
                 fifty++;
-            } else if (number > 20) {
-                number -= 20;
+            } else if (amount > 20) {
+                amount -= 20;
                 twenty++;
-            } else if (number >= 10) {
-                number -= 10;
+            } else if (amount >= 10) {
+                amount -= 10;
                 ten++;
-            } else if (number >= 5) {
-                number -= 5;
+            } else if (amount >= 5) {
+                amount -= 5;
                 five++;
-            } else if (number >= 2) {
-                number -= 2;
+            } else if (amount >= 2) {
+                amount -= 2;
                 two++;
             } else {
-                number -= 1;
+                amount -= 1;
                 one++;
             }
 
@@ -51,5 +51,7 @@ public class Ex_04 {
                 + (five > 0 ? five + " pieces of 5$ \n" : "")
                 + (two > 0 ? two + " pieces of 2$ \n" : "")
                 + (one > 0 ? one + " pieces of 1$" : ""));
+
+        scanner.close();
     }
 }

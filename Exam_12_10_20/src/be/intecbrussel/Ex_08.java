@@ -5,32 +5,34 @@ import java.util.Scanner;
 public class Ex_08 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Voor het berekenen van de oppervlakte van een aantal meetkundige figuren. invoer 1 voor vierkant, 2 voor driehoek, 3 voor cirkel: ");
+        System.out.println("Enter 1 for square, 2 for triangle, 3 for circle: ");
         int figure = scanner.nextInt();
 
-        double area=0;
+        double field=0;
         final double PI = 3.14;
 
         if(figure==1){
-            System.out.println("Invoer een zijde van vierkant AUB: ");
+            System.out.println("Enter a side of square please: ");
             int side = scanner.nextInt();
-            area = side *side;
+            field = side *side;
         }
         else if(figure==2){
-            System.out.println("Invoer de basis van driehoek AUB.");
+            System.out.println("Enter the base of triangle please:");
             int base = scanner.nextInt();
-            System.out.println("Invoer de hoogte van driehoek AUB.");
+            System.out.println("Enter the height of triangle please.");
             int height = scanner.nextInt();
-            area = base *height/2;
+            field = base *height/2;
         }
         else if(figure==3){
-            System.out.println("Invoer de straal van cirkel AUB.");
+            System.out.println("Enter the radius of circle please.");
             int radius = scanner.nextInt();
 
-            area = Math.pow(radius,2)*PI;
+            field = Math.pow(radius,2)*PI;
         }
-        else System.out.println("U heeft geen geldige nummer ingevoerd.");
+        else System.out.println("You entered invalid ");
 
-        System.out.println("De oppervlakte is " + area);
+        System.out.println("The field is " + field);
+
+        scanner.close();
     }
 }
