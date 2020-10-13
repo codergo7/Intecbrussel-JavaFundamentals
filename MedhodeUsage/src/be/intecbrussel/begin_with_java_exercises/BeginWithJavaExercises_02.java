@@ -9,14 +9,10 @@ public class BeginWithJavaExercises_02 {
 
         System.out.println("Enter a number: ");
         int firstNumber = scanner.nextInt();
-
-
     }
 
     public static boolean isEven(int number){
-        if(number%2==0) return true;
-
-        return false;
+       return number%2==0;
     }
 }
 
