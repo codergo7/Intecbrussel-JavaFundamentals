@@ -9,7 +9,7 @@ public class Ex7 {
         System.out.println("Enter a text please ");
         String text = scanner.nextLine();
 
-        System.out.println("There are " + amountOfSpace(text) + " spaces");
+        System.out.println("There are " + amountOfSpace2(text) + " spaces");
     }
     public static int amountOfSpace(String text){
         int counter =0;
@@ -19,5 +19,10 @@ public class Ex7 {
             }
         }
         return counter;
+    }
+    public static int amountOfSpace2(String text){
+        int counter =0;
+        String str =text.replace(" ","");
+        return text.length()-str.length();
     }
 }
