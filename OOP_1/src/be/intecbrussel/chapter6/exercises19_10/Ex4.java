@@ -1,4 +1,4 @@
-package be.intecbrussel.chapter6.examen19_10;
+package be.intecbrussel.chapter6.exercises19_10;
 
 import java.util.Random;
 import java.util.Scanner;
