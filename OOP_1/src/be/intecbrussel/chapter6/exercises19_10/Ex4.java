@@ -20,7 +20,7 @@ public class Ex4 {
             guess = scanner.nextInt(10);
             step++;
         }
-        System.out.println("Congratulations you guess ture " + step + " steps");
+        System.out.println("Congratulations you guessed right " + step + " steps");
 
     }
 }
