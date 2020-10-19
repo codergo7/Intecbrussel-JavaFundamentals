@@ -17,8 +17,6 @@ public class BeginWithJavaExercises_05 {
         for(int i = 0, k = number.length()-1;i<k; i++,k--){
             if(number.charAt(i) != number.charAt(k)) return false;
         }
-
         return true;
     }
-
 }

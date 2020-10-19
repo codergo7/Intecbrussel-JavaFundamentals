@@ -7,6 +7,7 @@ public class Main {
         String str2 = str1;
         str1 ="hello";
 
+
         System.out.println(str1.equals(str2));
 
     }

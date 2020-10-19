@@ -15,10 +15,10 @@ public class Ex_07 {
         String note = "You are successful";
 
         if(pointOfMath<6){
-        note = "You are not successful. Because point of math is less than 6.";
+        note = "You are not successful. Because point of Math is less than 6.";
         }
         if((pointOfAccounting + pointOfComputerScience)<12){
-            note = "You are not successful. Because total point of Computer Science and Accounting are less than 12" + (pointOfMath<6? "and point of math is less than 6.":"");
+            note = "You are not successful. Because total point of Computer Science and Accounting are less than 12" + (pointOfMath<6? " and point of Math is less than 6.":"");
         }
 
         System.out.println(note);

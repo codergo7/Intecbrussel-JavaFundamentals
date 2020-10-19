@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Ex_05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Leeftijd: ");
+        System.out.println("Age: ");
         int age = scanner.nextInt();
-        System.out.println("Aantal kinderen: ");
+        System.out.println("Amount of children: ");
         int amountChildren = scanner.nextInt();
-        System.out.println("Jaarinkomen: ");
+        System.out.println("Annual income: ");
         int annualIncome= scanner.nextInt();
 
         double fee = 10;
@@ -26,7 +26,7 @@ public class Ex_05 {
             fee -= 2.5;
         }
 
-        System.out.println("Uw lidgeld is " + (fee > 2.5 ? fee : 2.5) + " Euros");
+        System.out.println("Your membership fee: " + (fee > 1.5 ? fee : 1.5) + " Euros");
 
         scanner.close();
     }
