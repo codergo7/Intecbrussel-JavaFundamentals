@@ -1,4 +1,4 @@
-package testt;
+package be.intecbrussel.chapter7;
 
 import java.util.Random;
 
@@ -25,6 +25,7 @@ public class BubbleSort {
     }
 
     public static int[] bubbleSortArray(int[] nums) {
+        // time complexity is O(n) in the best case, O(n*n) in the worst complexity
         int amountOfSwap=0;
         for (int j = 0; j <nums.length; j++) {
             for (int i = 0; i < nums.length - 1; i++) {

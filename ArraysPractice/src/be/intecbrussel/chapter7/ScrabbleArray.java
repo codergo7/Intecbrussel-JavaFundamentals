@@ -1,4 +1,4 @@
-package testt;
+package be.intecbrussel.chapter7;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class ScrabbleArray {
         System.out.println("Enter a word: ");
         String word = scanner.nextLine();
 
-        char[] letters = word.toCharArray();
+        char[] letters = word.toUpperCase().toCharArray();
 
         System.out.println("Your point: " + pointCalculator( letters));
 
@@ -21,7 +21,7 @@ public class ScrabbleArray {
 
         int sumOfPoints =0;
         for(char letter: letters){
-            sumOfPoints+=scrabbleLetters[letter-'a'];
+            sumOfPoints+=scrabbleLetters[letter-'A'];
         }
         return sumOfPoints;
     }
