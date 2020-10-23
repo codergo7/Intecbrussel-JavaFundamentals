@@ -15,5 +15,14 @@ public class RectangleApp {
         System.out.println(rect3.getPosition()[0]);
         System.out.println(rect3.getPosition()[1]);
 
+        System.out.println(rect3.getHeight());
+
+        rect3.setHeight(-1);
+        System.out.println(rect3.getHeight());
+        rect3.setWeight(-2);
+
+        System.out.println(rect3.getWeight());
+
     }
+
 }

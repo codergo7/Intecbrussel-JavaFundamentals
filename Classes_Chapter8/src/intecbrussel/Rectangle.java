@@ -6,8 +6,6 @@ public class Rectangle {
     private int xPos;
     private int yPos;
 
-
-
     public Rectangle() {
         this(1,1,1,1);
     }
@@ -16,12 +14,11 @@ public class Rectangle {
     }
 
     public Rectangle(int height, int weight, int xPos, int yPos) {
-       this.height = height;
-       this.weight = weight;
-        this.xPos = xPos;
-        this.yPos = yPos;
+       this.height = height>0 ? height : -height;
+        this.weight = weight>0 ? weight : -weight;
+        this.xPos = Math.abs(xPos);
+        this.yPos = Math.abs(xPos);
     }
-
 
 
     public int getPerimeter(){
@@ -36,8 +33,7 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
-        if(height>0)
-            this.height = height;
+       this.height = height>0 ? height: this.height;
     }
 
     public int getWeight() {
@@ -45,7 +41,7 @@ public class Rectangle {
     }
 
     public void setWeight(int weight) {
-        if(weight > 0)this.weight = weight;
+        this.weight = weight>0 ? weight : this.weight;
     }
 
     public void setPosition(int xPos, int yPos){
