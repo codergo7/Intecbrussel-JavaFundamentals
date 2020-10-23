@@ -9,12 +9,20 @@ public class Rectangle {
 
 
     public Rectangle() {
+        this(1,1,1,1);
+    }
+    public Rectangle(int height, int weight) {
+       this(height,weight,1,1);
     }
 
-    public Rectangle(int height, int weight) {
-        this.height = height;
-        this.weight = weight;
+    public Rectangle(int height, int weight, int xPos, int yPos) {
+       this.height = height;
+       this.weight = weight;
+        this.xPos = xPos;
+        this.yPos = yPos;
     }
+
+
 
     public int getPerimeter(){
         return 2*(height+weight);
@@ -28,7 +36,8 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
-        this.height = height;
+        if(height>0)
+            this.height = height;
     }
 
     public int getWeight() {
@@ -36,7 +45,7 @@ public class Rectangle {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if(weight > 0)this.weight = weight;
     }
     public int getxPos() {
         return xPos;

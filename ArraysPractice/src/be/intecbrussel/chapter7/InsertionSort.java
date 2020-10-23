@@ -35,9 +35,7 @@ public class InsertionSort {
                     nums[i + 1] = key;
 
                 }
-                else{
-                    break;
-                }
+
             }
 
         }
