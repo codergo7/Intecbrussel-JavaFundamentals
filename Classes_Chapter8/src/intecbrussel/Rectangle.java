@@ -47,19 +47,29 @@ public class Rectangle {
     public void setWeight(int weight) {
         if(weight > 0)this.weight = weight;
     }
-    public int getxPos() {
+
+    public void setPosition(int xPos, int yPos){
+        this.xPos=xPos;
+        this.yPos=yPos;
+    }
+
+    public int[] getPosition(){
+        return new int[]{this.xPos, this.yPos};
+    }
+
+    public int getXPos() {
         return xPos;
     }
 
-    public void setxPos(int xPos) {
+    public void setXPos(int xPos) {
         this.xPos = xPos;
     }
 
-    public int getyPos() {
+    public int getYPos() {
         return yPos;
     }
 
-    public void setyPos(int yPos) {
+    public void setYPos(int yPos) {
         this.yPos = yPos;
     }
 }
