@@ -16,7 +16,7 @@ public class ArrayApp {
         testCharArrayTools();
 
 
-        // Not completed
+        // Not yet completed
         //CharArrayTools.printDict(CharArrayTools.generateDictionary(3));
 
 
