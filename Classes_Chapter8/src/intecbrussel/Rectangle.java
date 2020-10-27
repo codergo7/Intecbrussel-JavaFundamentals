@@ -1,47 +1,42 @@
 package intecbrussel;
 
 public class Rectangle {
+    public static int amountOfRectangles;
     private int height;
     private int weight;
     private int xPos;
     private int yPos;
 
-    public Rectangle() {
-        this(1,1,1,1);
-        System.out.println("constructor");
+    {
+        amountOfRectangles += 10;
     }
+
+    public Rectangle() {
+        this(1, 1, 1, 1);
+    }
+
     public Rectangle(int height, int weight) {
-       this(height,weight,1,1);
+        this(height, weight, 1, 1);
     }
 
     public Rectangle(int height, int weight, int xPos, int yPos) {
-       this.height = height>0 ? height : -height;
-        this.weight = weight>0 ? weight : -weight;
+        amountOfRectangles++;
+        this.height = height > 0 ? height : -height;
+        this.weight = weight > 0 ? weight : -weight;
         this.xPos = Math.abs(xPos);
         this.yPos = Math.abs(xPos);
     }
-    {
-        System.out.println("code block");
-    }
 
     public Rectangle(Rectangle rectangle) {
-        this(rectangle.height, rectangle.weight, rectangle.xPos, rectangle.yPos );
-        /*
-        this.height = rectangle.height;
-        this.weight = rectangle.weight;
-        this.xPos = rectangle.xPos;
-        this.yPos = rectangle.yPos;
-
-         */
+        this(rectangle.height, rectangle.weight, rectangle.xPos, rectangle.yPos);
     }
 
-
-
-    public int getPerimeter(){
-        return 2*(height+weight);
+    public int getPerimeter() {
+        return 2 * (height + weight);
     }
-    public int getArea(){
-        return height*weight;
+
+    public int getArea() {
+        return height * weight;
     }
 
     public int getHeight() {
@@ -49,7 +44,7 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
-       this.height = height>0 ? height: this.height;
+        this.height = height > 0 ? height : this.height;
     }
 
     public int getWeight() {
@@ -57,15 +52,15 @@ public class Rectangle {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight>0 ? weight : this.weight;
+        this.weight = weight > 0 ? weight : this.weight;
     }
 
-    public void setPosition(int xPos, int yPos){
-        this.xPos=xPos;
-        this.yPos=yPos;
+    public void setPosition(int xPos, int yPos) {
+        this.xPos = xPos;
+        this.yPos = yPos;
     }
 
-    public int[] getPosition(){
+    public int[] getPosition() {
         return new int[]{this.xPos, this.yPos};
     }
 

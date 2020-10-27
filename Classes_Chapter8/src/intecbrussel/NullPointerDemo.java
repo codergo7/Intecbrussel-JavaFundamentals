@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class NullPointerDemo {
     private Scanner scanner;
 
+    {
+        //scanner = new Scanner(System.in());
+    }
 
 
     public int getIntFromUser(){

@@ -26,6 +26,9 @@ public class RectangleApp {
          */
 
         Rectangle rectangle = new Rectangle();
+        Rectangle rectangle1 = new Rectangle();
+        Rectangle rectangle2 = new Rectangle();
+        System.out.println(Rectangle.amountOfRectangles);
 
     }
 
