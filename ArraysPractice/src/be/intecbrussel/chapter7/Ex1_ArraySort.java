@@ -55,6 +55,7 @@ public class Ex1_ArraySort {
         return nums;
     }
 
+
     public static void printArr(int[] nums) {
         for (int num : nums) {
             System.out.print(num + " ");
