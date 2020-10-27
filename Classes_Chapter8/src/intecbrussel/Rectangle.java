@@ -1,14 +1,20 @@
 package intecbrussel;
 
 public class Rectangle {
-    public static int amountOfRectangles;
+    public static int count;
+    public static int numberOfAngle;
     private int height;
     private int weight;
     private int xPos;
     private int yPos;
-
     {
-        amountOfRectangles += 10;
+        System.out.println("code block");
+        count += 10;
+    }
+
+    static {
+        System.out.println("static code block");
+        count--;
     }
 
     public Rectangle() {
@@ -20,7 +26,6 @@ public class Rectangle {
     }
 
     public Rectangle(int height, int weight, int xPos, int yPos) {
-        amountOfRectangles++;
         this.height = height > 0 ? height : -height;
         this.weight = weight > 0 ? weight : -weight;
         this.xPos = Math.abs(xPos);
@@ -29,6 +34,10 @@ public class Rectangle {
 
     public Rectangle(Rectangle rectangle) {
         this(rectangle.height, rectangle.weight, rectangle.xPos, rectangle.yPos);
+    }
+
+    public int getCount(){
+        return count;
     }
 
     public int getPerimeter() {
