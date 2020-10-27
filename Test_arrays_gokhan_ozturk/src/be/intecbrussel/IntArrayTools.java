@@ -15,7 +15,7 @@ public class IntArrayTools {
 
 
 
-    // This method sorts ascending with selection algorithm
+    // This method sorts in ascending order with selection algorithm
     public static int[] sort(int[] numbers) {
         int indis = 0;
         for (int j = 0; j < numbers.length; j++) {
@@ -106,7 +106,7 @@ public class IntArrayTools {
         return nums;
     }
 
-    // This method search parameter number in the parameter array
+    // This method search the parameter number in the parameter array
     // using Binary Search Algorithm
     public static boolean chopchopExtra(int[] numbers, int num){
         numbers= sort(numbers);

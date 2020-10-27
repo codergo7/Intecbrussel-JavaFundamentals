@@ -3,7 +3,7 @@ package intecbrussel;
 public class RectangleApp {
     public static void main(String[] args) {
 
-        Rectangle rect1 = new Rectangle();
+        /*Rectangle rect1 = new Rectangle();
         Rectangle rect2 = new Rectangle(10,20);
         Rectangle rect3 = new Rectangle(30,40);
         rect3.setPosition(3,5);
@@ -22,6 +22,10 @@ public class RectangleApp {
         rect3.setWeight(-2);
 
         System.out.println(rect3.getWeight());
+
+         */
+
+        Rectangle rectangle = new Rectangle();
 
     }
 

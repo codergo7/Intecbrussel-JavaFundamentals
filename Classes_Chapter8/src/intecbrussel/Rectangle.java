@@ -8,6 +8,7 @@ public class Rectangle {
 
     public Rectangle() {
         this(1,1,1,1);
+        System.out.println("constructor");
     }
     public Rectangle(int height, int weight) {
        this(height,weight,1,1);
@@ -19,6 +20,21 @@ public class Rectangle {
         this.xPos = Math.abs(xPos);
         this.yPos = Math.abs(xPos);
     }
+    {
+        System.out.println("code block");
+    }
+
+    public Rectangle(Rectangle rectangle) {
+        this(rectangle.height, rectangle.weight, rectangle.xPos, rectangle.yPos );
+        /*
+        this.height = rectangle.height;
+        this.weight = rectangle.weight;
+        this.xPos = rectangle.xPos;
+        this.yPos = rectangle.yPos;
+
+         */
+    }
+
 
 
     public int getPerimeter(){
