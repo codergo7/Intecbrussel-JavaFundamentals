@@ -10,10 +10,11 @@ public class SelectionSort {
         int limit = 50;
         int[] numbers = new int[limit];
         numbers = fillRandomArray(rand, numbers);
+        System.out.println("Random list:");
         printArr(numbers);
 
         numbers = selectionSortArray(numbers);
-        System.out.println();
+        System.out.println("\n\nSorted list: ");
         printArr(numbers);
     }
 
