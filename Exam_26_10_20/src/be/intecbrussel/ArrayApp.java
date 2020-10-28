@@ -24,9 +24,9 @@ public class ArrayApp {
 
     public static void testCharArrayTools() {
         System.out.println("**********************  Filtered Alphabet ************************");
-        char[] chars = {'a', 'b',',', '1', 'C', 'z', 'Z', 'A', '$', ')', 'é', 'a', 'b'};
+        char[] chars = {'a', 'b', ',', '1', 'C', 'z', 'Z', 'A', '$', ')', 'é', 'a', 'b'};
         CharArrayTools.printCharArray(chars);
-        System.out.println( "\nFiltered alphabet characters: ");
+        System.out.println("\nFiltered alphabet characters: ");
         chars = CharArrayTools.filterAlphabet(chars);
         CharArrayTools.printCharArray(chars);
         System.out.println("\n\n**********************  Sorted Alphabet ************************");
@@ -51,8 +51,10 @@ public class ArrayApp {
         printArr(numbers);
         System.out.println("Is sorted?  " + IntArrayTools.isSorted(numbers));
         numbers = IntArrayTools.sort(numbers);
-        System.out.println("Sorted list");
+        System.out.println("\nSorted list");
         printArr(numbers);
+
+        System.out.println("Is sorted?  " + IntArrayTools.isSorted(numbers));
 
         System.out.println("**********************  isSorted_ascendingOrDescending ************************");
         numbers = fillRandomArray(rand, numbers);
@@ -64,6 +66,7 @@ public class ArrayApp {
         numbers = fillRandomArray(rand, numbers);
         System.out.println("Random list: ");
         printArr(numbers);
+        System.out.println("Sorted list: ");
         numbers = IntArrayTools.sortExtra(numbers, "d");
         printArr(numbers);
 
@@ -81,13 +84,13 @@ public class ArrayApp {
         System.out.println("Random list: ");
         printArr(numbers);
         int number = 10;
-        System.out.println("Is there " + number + " in number list? " + IntArrayTools.chopchop(numbers, 10));
+        System.out.println("Is there " + number + " in the number list? " + IntArrayTools.chopchop(numbers, 10));
 
         System.out.println("\n**********************  ChopchopExtra Binary Search ************************");
         numbers = fillRandomArray(rand, numbers);
         System.out.println("Random list: ");
         printArr(numbers);
-        System.out.println("Is there " + number + " in number list? " + IntArrayTools.chopchopExtra(numbers, 10));
+        System.out.println("Is there " + number + " in the number list? " + IntArrayTools.chopchopExtra(numbers, 10));
     }
 
     public static int[] fillRandomArray(Random rand, int[] arr) {
