@@ -28,6 +28,8 @@ public class InstanceControlFlow {
 
         InstanceControlFlow icf = new InstanceControlFlow();
         System.out.println("main");
+        InstanceControlFlow icf1 = new InstanceControlFlow();
+
     }
 
     public void m1(){
