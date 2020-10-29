@@ -66,7 +66,7 @@ public class ArrayApp {
         numbers = fillRandomArray(rand, numbers);
         System.out.println("Random list: ");
         printArr(numbers);
-        System.out.println("Sorted list: ");
+        System.out.println("Sortedtaga list: ");
         numbers = IntArrayTools.sortExtra(numbers, "d");
         printArr(numbers);
 
