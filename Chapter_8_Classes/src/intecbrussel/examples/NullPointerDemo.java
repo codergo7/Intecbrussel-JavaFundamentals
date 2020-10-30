@@ -1,4 +1,4 @@
-package intecbrussel;
+package intecbrussel.examples;
 
 import java.util.Scanner;
 

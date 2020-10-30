@@ -1,4 +1,4 @@
-package intecbrussel;
+package intecbrussel.examples;
 
 public class CircleApp {
 

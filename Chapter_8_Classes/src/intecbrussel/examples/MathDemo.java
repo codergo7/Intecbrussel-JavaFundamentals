@@ -1,4 +1,4 @@
-package intecbrussel;
+package intecbrussel.examples;
 
 import static java.lang.Math.*;
 public class MathDemo {

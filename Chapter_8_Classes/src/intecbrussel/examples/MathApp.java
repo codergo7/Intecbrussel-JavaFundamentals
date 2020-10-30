@@ -1,4 +1,4 @@
-package intecbrussel;
+package intecbrussel.examples;
 
 public class MathApp {
     public static void main(String[] args) {
