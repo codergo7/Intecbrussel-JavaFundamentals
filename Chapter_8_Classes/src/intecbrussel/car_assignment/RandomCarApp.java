@@ -15,6 +15,14 @@ public class RandomCarApp {
         for (Car car : cars){
             car.print();
         }
+
+        for(Car car: cars){
+            car.park();
+        }
+
+        for (Car car : cars){
+            car.print();
+        }
     }
 
     public static Car randomGenerator() {
