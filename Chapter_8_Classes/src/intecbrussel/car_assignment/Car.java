@@ -13,30 +13,33 @@ public class Car {
     }
 
     public Car() {
-        this(100,0, "white", false);
+        this(100, 0, "white", false);
     }
+
     public Car(int hp) {
-        this( hp,0, "white", false);
+        this(hp, 0, "white", false);
     }
+
     public Car(double speed) {
-        this( 100, speed, "white", false);
+        this(100, speed, "white", false);
     }
 
     public Car(String color) {
-        this( 100,0, color, false);
+        this(100, 0, color, false);
     }
+
     public Car(int hp, String color) {
-        this( hp,0, color, false);
+        this(hp, 0, color, false);
     }
+
     public Car(int hp, boolean light) {
-        this( hp, 0,"white", light);
+        this(hp, 0, "white", light);
     }
 
     public Car(int hp, String color, boolean light) {
-        this.hp = hp;
-        this.color = color;
-        this.light = light;
+        this(hp, 0, color, light);
     }
+
     public Car(int hp, double speed, String color, boolean light) {
         this.hp = hp;
         this.speed = speed;
@@ -44,32 +47,31 @@ public class Car {
         this.light = light;
     }
 
-    public void lightToggle(boolean light){
-        this.light= light;
+    public void lightToggle(boolean light) {
+        this.light = light;
     }
 
-    public void speed(double speed){
-        if(this.speed + speed <0) {
+    public void speed(double speed) {
+        if (this.speed + speed < 0) {
             this.speed = 0;
-        }
-        else{
+        } else {
             this.speed += speed;
         }
     }
 
-    public void park(){
-        this.speed =0;
+    public void park() {
+        this.speed = 0;
         this.light = false;
     }
 
-    public int rePaint(String color){
+    public int rePaint(String color) {
         this.color = color;
 
         return costPaint(color);
     }
 
     private int costPaint(String color) {
-        int cost=0;
+        int cost = 0;
         for (int i = 0; i < color.length(); i++) {
             cost += color.charAt(i);
         }
@@ -96,7 +98,7 @@ public class Car {
         this.light = light;
     }
 
-    public void print(){
-        System.out.println("Color: " +  this.color + ", Hp: "+ this.hp +  ", Speed: " + this.speed + ", Light status: " + this.light);
+    public void print() {
+        System.out.println("Color: " + this.color + ", Hp: " + this.hp + ", Speed: " + this.speed + ", Light status: " + this.light);
     }
 }
