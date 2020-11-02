@@ -13,7 +13,7 @@ public class Car {
     private Person driver;
     private Person[] seats;
 
-    // composition relationship between Car and Engine. If a car instance be removed then its engine instance be removed automatically
+    // There is composition relationship between Car and Engine. If a car instance be removed then its engine will be removed automatically
     {
         engine = new Engine();
     }
