@@ -13,7 +13,10 @@ public class Car {
     private Person driver;
     private Person[] seats;
 
-    // There is composition relationship between Car and Engine. If a car instance be removed then its engine will be removed automatically
+    /*
+    There is a composition relationship between Car and Engine.
+    If a car instance is removed, then its engine will be removed automatically
+     */
     {
         engine = new Engine();
     }
@@ -32,14 +35,20 @@ public class Car {
     }
 
 
-    // this method regulates speed of the car. speed of the car can accelerate if car has a driver and it's fuel is more than zero
+    /*
+     regulates speed of the car. speed of the car can accelerate
+     if car has a driver and it's amount of fuel is more than zero.
+     */
     public void accelerate(int speed) {
         if (this.driver == null || this.engine.getFuel() == 0) {
             this.speed = 0;
         } else this.speed += speed;
+
+        // increased speed  causes more fuel consumption
+        this.engine.burnFuel(speed);
     }
 
-    // this method changes the color of the car and returns the cost calling costRePaint method of Color
+    // changes the color of the car and returns the cost calling costRePaint method of Color
     public int rePaint(Color color) {
         this.color = color;
         return color.costRePaint(color.getRgb());
@@ -51,7 +60,7 @@ public class Car {
         //Arrays.sort(passengers, new ComparatorByAge());
     }
 
-    // adds Person instance if this.seats has empty seat
+    // adds Person instance if the car has empty seat
     public void add(Person passenger) {
         if (this.seats[this.seats.length - 1] != null) {
             System.out.println("Sorry. There is no empty seat");

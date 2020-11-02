@@ -2,6 +2,9 @@ package be.intecbrussel.car_association;
 
 public class ColorRgb {
 
+    /*
+        gets rgb array based on the name of the color and returns it
+         */
     public static int[] getRgbByName(String name) {
         Object[] colors = {"AliceBlue", 0xF0, 0xF8, 0xFF, "AntiqueWhite", 0xFA, 0xEB, 0xD7, "Aqua", 0x00, 0xFF, 0xFF,
                 "Aquamarine", 0x7F, 0xFF, 0xD4, "Azure", 0xF0, 0xFF, 0xFF, "Beige", 0xF5, 0xF5, 0xDC,
@@ -48,9 +51,7 @@ public class ColorRgb {
 
         int[] rgb = new int[3];
 
-        /*
-        according to name of the color gets rgb array and returns it
-         */
+
         for (int i = 0; i < colors.length; i += 4) {
             if (name.equals(colors[i])) {
                 rgb[0] = (Integer) colors[i + 1];

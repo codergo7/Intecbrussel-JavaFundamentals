@@ -3,7 +3,7 @@ package be.intecbrussel.car_association;
 public class Engine {
 
     private int fuelCapacity;
-    private int fuel;
+    private double fuel;
 
     public Engine() {
     }
@@ -13,7 +13,7 @@ public class Engine {
     }
 
 
-    //this method takes fuel and updates fuel data
+    //takes fuel and updates fuel data
     public void reFuel(int fuel) {
         if(this.fuel+fuel > fuelCapacity){
             this.fuel = fuelCapacity;
@@ -23,10 +23,10 @@ public class Engine {
         }
     }
 
-    // this method consumes the fuel and updates fuel data
-    public void burnFuel(int fuel) {
-        if(this.fuel -fuel >0){
-            this.fuel -= fuel;
+    //consumes the fuel and updates fuel data
+    public void burnFuel(int speed) {
+        if(this.fuel - speed*0.1 >0){
+            this.fuel -= speed*0.1;
         }
     }
 
@@ -39,7 +39,7 @@ public class Engine {
         this.fuelCapacity = fuelCapacity;
     }
 
-    public int getFuel() {
+    public double getFuel() {
         return fuel;
     }
 
