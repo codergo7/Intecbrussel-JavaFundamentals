@@ -1,6 +1,7 @@
 package be.intecbrussel.ex_car;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class CarApp {
@@ -11,25 +12,38 @@ public class CarApp {
         Car pegout = new Car("pegout", new Color("Yellow"), new Person("Manuel", 28));
         pegout.getEngine().setFuelCapacity(40);
 
-        System.out.println(pegout.toString());
+        //System.out.println(pegout.toString());
 
         Car ferrari = new Car("ferrari", new Color("Red"), new Person("Jean-Marie-Robert-Roger",35));
         ferrari.getEngine().setFuelCapacity(60);
 
-        System.out.println(ferrari.toString());
+        //System.out.println(ferrari.toString());
 
         // change the color and calculate the cost
-        System.out.println(pegout.rePaint(new Color("White")) + " Euro");
+        //System.out.println(pegout.rePaint(new Color("White")) + " Euro");
 
         // 4 - PassengerArray
 
-        Car rodePegout = new Car("pegout", new Color("Red"));
-        rodePegout.setSeats(new Person[3]);
-        //rodePegout.setSeats(new Person[]{new Person("Leonardo",20),new Person("Raphael",21),
-          //      new Person("Michelangelo ",22), new Person("Leonardo",23)});
-
         Car passat = new Car("Passat", new Color("Yellow"));
         passat.setSeats(new Person[10]);
+
+        Car rodePegout = new Car("pegout", new Color("Red"));
+        rodePegout.setSeats(new Person[4]);
+
+        rodePegout.add(new Person("Leonardo",22));
+        rodePegout.add(new Person("Raphael",21));
+        rodePegout.add(new Person("Michelangelo",24));
+        rodePegout.add(new Person("Donatello",23));
+
+        // gets passengers of the Car instance
+        Person[] passengers =rodePegout.getSeats();
+
+        // sorts Persons by age
+        Collections.sort(Arrays.asList(passengers), new ComparatorByAge());
+
+        for(Person person : passengers){
+            System.out.println(person);
+        }
 
 
     }

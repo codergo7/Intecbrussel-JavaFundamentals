@@ -46,14 +46,14 @@ public class Car {
         return color.costRePaint(color.getRgb());
     }
 
-    public void add(Person passanger){
+    public void add(Person passenger){
         if(this.seats[this.seats.length-1]!=null){
             System.out.println("Sorry. There is no empty seat");
             return;
         }
         for (int i = 0; i < this.seats.length; i++) {
             if (this.seats[i]==null){
-                this.seats[i]=passanger;
+                this.seats[i]=passenger;
                 return;
             }
         }
