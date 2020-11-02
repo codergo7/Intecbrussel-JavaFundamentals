@@ -38,7 +38,7 @@ public class CarApp {
         Person[] passengers =rodePegout.getSeats();
 
         // sorts Persons by age
-        Collections.sort(Arrays.asList(passengers), new ComparatorByAge());
+        rodePegout.sortPerson(passengers);
 
         for(Person person : passengers){
             System.out.println(person);

@@ -1,5 +1,7 @@
 package be.intecbrussel.car_association;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class Car {
@@ -17,7 +19,7 @@ public class Car {
     }
 
     //Constructors
-    public Car(String brand,  Color color) {
+    public Car(String brand, Color color) {
         this(brand, color, null);
     }
 
@@ -30,14 +32,11 @@ public class Car {
     }
 
 
-
-
     // this method regulates speed of the car. speed of the car can accelerate if car has a driver and it's fuel is more than zero
     public void accelerate(int speed) {
-        if(this.driver == null || this.engine.getFuel()==0){
+        if (this.driver == null || this.engine.getFuel() == 0) {
             this.speed = 0;
-        }
-        else this.speed += speed;
+        } else this.speed += speed;
     }
 
     // this method changes the color of the car and returns the cost calling costRePaint method of Color
@@ -46,14 +45,21 @@ public class Car {
         return color.costRePaint(color.getRgb());
     }
 
-    public void add(Person passenger){
-        if(this.seats[this.seats.length-1]!=null){
+    // sorts Persons by age
+    public void sortPerson(Person[] passengers) {
+        Collections.sort(Arrays.asList(passengers), new ComparatorByAge());
+        //Arrays.sort(passengers, new ComparatorByAge());
+    }
+
+    // adds Person instance if this.seats has empty seat
+    public void add(Person passenger) {
+        if (this.seats[this.seats.length - 1] != null) {
             System.out.println("Sorry. There is no empty seat");
             return;
         }
         for (int i = 0; i < this.seats.length; i++) {
-            if (this.seats[i]==null){
-                this.seats[i]=passenger;
+            if (this.seats[i] == null) {
+                this.seats[i] = passenger;
                 return;
             }
         }
@@ -103,7 +109,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return  "Brand=" + brand +
+        return "Brand=" + brand +
                 ", speed=" + speed +
                 ", color=" + color.getName() +
                 ", engine=" + engine.getFuelCapacity() + "L" +
