@@ -48,22 +48,18 @@ public class ColorRgb {
 
         int[] rgb = new int[3];
 
+        /*
+        according to name of the color gets rgb array and returns it
+         */
         for (int i = 0; i < colors.length; i += 4) {
             if (name.equals(colors[i])) {
                 rgb[0] = (Integer) colors[i + 1];
-                System.out.println(rgb[0]);
                 rgb[1] = (Integer) colors[i + 2];
-                System.out.println(rgb[1]);
-
                 rgb[2] = (Integer) colors[i + 3];
-                System.out.println(rgb[2]);
-
             }
         }
         return rgb;
     }
-
-
 }
 
 

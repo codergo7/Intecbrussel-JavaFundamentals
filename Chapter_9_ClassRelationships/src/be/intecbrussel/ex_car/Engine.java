@@ -6,8 +6,6 @@ public class Engine {
 
     private int fuelCapacity;
     private int fuel;
-    //private int tripKm;
-
 
     public Engine() {
     }
@@ -16,10 +14,8 @@ public class Engine {
         this.fuelCapacity = fuelCapacity;
     }
 
-    public int getFuel() {
-        return fuel;
-    }
 
+    //this method takes fuel and updates fuel data
     public void reFuel(int fuel) {
         if(this.fuel+fuel > fuelCapacity){
             this.fuel = fuelCapacity;
@@ -29,9 +25,25 @@ public class Engine {
         }
     }
 
+    // this method consumes the fuel and updates fuel data
     public void burnFuel(int fuel) {
         if(this.fuel -fuel >0){
             this.fuel -= fuel;
         }
     }
+
+    // getters and setters
+    public int getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(int fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
+    }
+
+    public int getFuel() {
+        return fuel;
+    }
+
+
 }
