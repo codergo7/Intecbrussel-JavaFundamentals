@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_car;
+package be.intecbrussel.car_association;
 
 public class Person {
 
