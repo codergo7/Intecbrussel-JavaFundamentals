@@ -8,11 +8,32 @@ public class Car {
     private Engine engine;
     private Person driver;
 
+    {
+        engine = new Engine();
+    }
 
 
+    public Car(String brand, Color color) {
+        this(brand,0, color, null);
+    }
+
+    public Car(String brand, Color color, Person driver) {
+        this(brand,0, color, driver);
+    }
+
+
+    public Car(String brand, int speed, Color color, Person driver) {
+        this.brand = brand;
+        this.speed = speed;
+        this.color = color;
+        this.driver = driver;
+        //this.engine = new Engine();
+    }
 
     public void accelerate(int speed) {
-        this.speed = speed;
+        if(this.driver != null && this.engine.getFuel()>0){
+            this.speed += speed;
+        }
     }
 
     public void tune(int speed) {
@@ -20,9 +41,9 @@ public class Car {
     }
 
     public void rePaint(Color color) {
+        color.costRePaint(color.getRgb());
         this.color = color;
     }
-
 
     public String getBrand() {
         return brand;

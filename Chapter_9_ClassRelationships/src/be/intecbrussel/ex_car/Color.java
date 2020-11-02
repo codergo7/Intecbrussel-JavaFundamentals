@@ -5,7 +5,17 @@ public class Color {
     private String name;
     private int[] rgb;
 
-    public Color() {
+    public Color(String name) {
+        this.name= name;
+        this.rgb = ColorRgb.getRgbByName(name);
+    }
+
+    public int costRePaint(int[] rgb) {
+        int sum =0;
+        for (int col : rgb){
+            sum+=col;
+        }
+        return sum;
     }
 
     public String getName() {
