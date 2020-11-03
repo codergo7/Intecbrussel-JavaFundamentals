@@ -15,6 +15,7 @@ public class CharArrayTools {
         return removeSpacesCharArray(filteredChars, newLength);
     }
 
+    // sorts the parameter array in descending order using Insertion Sort Algorithm
     public static char[] sortCharacters(char[] chars) {
         char[] filteredChars = new char[chars.length];
         int indis = 0;
@@ -49,7 +50,5 @@ public class CharArrayTools {
             System.out.print(c + " ");
         }
     }
-
-    // NOT COMPLETED
 
 }

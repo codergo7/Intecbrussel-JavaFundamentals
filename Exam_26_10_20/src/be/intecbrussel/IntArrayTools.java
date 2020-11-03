@@ -2,7 +2,7 @@ package be.intecbrussel;
 
 public class IntArrayTools {
 
-    //This method gives true if the parameter array is ascending sorted
+    //gives true if the parameter array is sorted in ascending order
     public static boolean isSorted(int[] nums) {
         int min = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -15,7 +15,7 @@ public class IntArrayTools {
 
 
 
-    // This method sorts in ascending order with selection algorithm
+    // sorts the parameter array in ascending order with selection algorithm
     public static int[] sort(int[] numbers) {
         int indis = 0;
         for (int j = 0; j < numbers.length; j++) {
@@ -46,8 +46,10 @@ public class IntArrayTools {
     ********************   EXTRAS ***************
      */
 
-    //This method gives true if the parameter array is sorted in ascending order and
-    // second parameter is "a" or sorted in descending order and second parameter is not "a"
+    /*
+    gives true if the parameter array is sorted in ascending order and
+    second parameter is "a" or sorted in descending order and second parameter is not "a"
+     */
     public static boolean isSortedExtra(int[] nums, String ascendingOrDescending) {
         if(ascendingOrDescending == "a"){
             return isSorted(nums);
@@ -61,7 +63,7 @@ public class IntArrayTools {
         return true;
     }
 
-    // This method sorts in descending order using Insertion Sort Algorithm
+    // sorts the parameter array in descending order using Insertion Sort Algorithm
     public static int[] sortExtra(int[] numbers, String ascendingOrDescending) {
         if(ascendingOrDescending=="a"){
             return sort(numbers);
@@ -85,7 +87,7 @@ public class IntArrayTools {
         return numbers;
     }
 
-   // This method sorts in ascending order using Bubble Sort Algorithm
+   // sorts the parameter array in ascending order using Bubble Sort Algorithm
     public static int[] bubbleSortArray(int[] nums) {
 
         int amountOfSwap=0;
@@ -106,8 +108,7 @@ public class IntArrayTools {
         return nums;
     }
 
-    // This method search the parameter number in the parameter array
-    // using Binary Search Algorithm
+    // search the parameter number in the parameter array using Binary Search Algorithm
     public static boolean chopchopExtra(int[] numbers, int num){
         numbers= sort(numbers);
 

@@ -6,20 +6,17 @@ import java.util.Scanner;
 public class ArrayApp {
 
     public static void main(String[] args) {
-        /*
-        TEST FOR IntArrayTools
-         */
-        testIntArrayTools();
+
+       // Test for IntArrayTools
+       //testIntArrayTools();
 
 
         //Test for CharArrayTools
-        testCharArrayTools();
+        //testCharArrayTools();
 
 
-        // Not yet completed
-        //CharArrayTools.printDict(CharArrayTools.generateDictionary(3));
-
-
+        // Test for Dictionary;
+        Dictionary.printDict(Dictionary.generateDictionary(3));
     }
 
     public static void testCharArrayTools() {
@@ -60,7 +57,7 @@ public class ArrayApp {
         numbers = fillRandomArray(rand, numbers);
         System.out.println("Random list: ");
         printArr(numbers);
-        System.out.println("Is sorted descending order? " + IntArrayTools.isSortedExtra(numbers, "d"));
+        System.out.println("Is sorted in descending order? " + IntArrayTools.isSortedExtra(numbers, "d"));
 
         System.out.println("\n**********************  Descending Sort ************************");
         numbers = fillRandomArray(rand, numbers);
