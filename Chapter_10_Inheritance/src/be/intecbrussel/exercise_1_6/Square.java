@@ -2,14 +2,19 @@ package be.intecbrussel.exercise_1_6;
 
 public class Square extends Rectangle{
 
+   public static int count;
+
+    {
+        count++;
+    }
+
+
     public Square() {
     }
 
     public Square(int side) {
         super(side,side);
     }
-
-
 
     public Square(int side, int x, int y) {
        super(side, side, x, y);
@@ -35,6 +40,12 @@ public class Square extends Rectangle{
         super.setWidth(width);
         super.setHeight(width);
     }
+
+    public static int getCount() {
+        return count;
+    }
+
+
 
     @Override
     public String toString() {

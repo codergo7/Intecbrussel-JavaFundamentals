@@ -2,10 +2,16 @@ package be.intecbrussel.exercise_1_6;
 
 public class Rectangle {
 
+    private static int count;
+
     private int height;
     private int width;
     private int x;
     private int y;
+
+    {
+        count++;
+    }
 
     public Rectangle() {
         this(1,1,1,1);
@@ -13,8 +19,6 @@ public class Rectangle {
 
     public Rectangle(int height, int width) {
         this(height,width,1,1);
-        this.height = height;
-        this.width = width;
     }
 
     // height and width can not be negative
@@ -76,6 +80,10 @@ public class Rectangle {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override

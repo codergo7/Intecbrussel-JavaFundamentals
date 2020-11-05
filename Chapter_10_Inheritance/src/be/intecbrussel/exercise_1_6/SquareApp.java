@@ -6,7 +6,7 @@ public class SquareApp {
 
         Square square1 = new Square();
         System.out.println(square1);
-        square1.setSide(-5);
+        //square1.setSide(-5);
         square1.setPosition(3,4);
         System.out.println(square1);
         System.out.println("Area= " + square1.getArea());
@@ -16,7 +16,11 @@ public class SquareApp {
         System.out.println(square2);
         System.out.println("Area= " + square2.getArea());
         System.out.println("Perimeter= " + square2.getPerimeter());
+        Rectangle rectangle = new Rectangle();
 
+
+        System.out.println("Rectangle count: " + Rectangle.getCount()); // 3
+        System.out.println("Square count: " + Square.getCount());       // 2
 
     }
 }
