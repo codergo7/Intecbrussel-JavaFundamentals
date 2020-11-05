@@ -8,7 +8,6 @@ public class Square extends Rectangle{
         count++;
     }
 
-
     public Square() {
     }
 
@@ -31,21 +30,17 @@ public class Square extends Rectangle{
 
     @Override
     public void setHeight(int height) {
-        super.setHeight(height);
-        super.setWidth(height);
+        setSide(height);
     }
 
     @Override
     public void setWidth(int width) {
-        super.setWidth(width);
-        super.setHeight(width);
+        setSide(width);
     }
 
     public static int getCount() {
         return count;
     }
-
-
 
     @Override
     public String toString() {
