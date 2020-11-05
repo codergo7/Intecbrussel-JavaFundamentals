@@ -11,6 +11,12 @@ public class Rectangle {
         this(1,1,1,1);
     }
 
+    public Rectangle(int height, int width) {
+        this(height,width,1,1);
+        this.height = height;
+        this.width = width;
+    }
+
     // height and width can not be negative
     public Rectangle(int height, int weight, int x, int y) {
         this.height = Math.abs(height);
@@ -72,5 +78,13 @@ public class Rectangle {
         this.y = y;
     }
 
-
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "height=" + height +
+                ", width=" + width +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
