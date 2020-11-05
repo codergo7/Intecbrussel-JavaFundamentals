@@ -11,11 +11,11 @@ public class Square extends Rectangle{
     }
 
     public void setSide(int side){
-        setHeight(side);
-        setWeight(side);
+        super.setHeight(side);
+        super.setWidth(side);
     }
 
     public int getSide(){
-        return getHeight();
+        return super.getHeight();
     }
 }

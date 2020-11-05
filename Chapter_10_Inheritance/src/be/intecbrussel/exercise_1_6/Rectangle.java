@@ -3,7 +3,7 @@ package be.intecbrussel.exercise_1_6;
 public class Rectangle {
 
     private int height;
-    private int weight;
+    private int width;
     private int x;
     private int y;
 
@@ -11,21 +11,24 @@ public class Rectangle {
         this(1,1,1,1);
     }
 
+    // height and width can not be negative
     public Rectangle(int height, int weight, int x, int y) {
-        this.height = height;
-        this.weight = weight;
+        this.height = Math.abs(height);
+        this.width = Math.abs(weight);
         this.x = x;
         this.y = y;
     }
 
-    public int gerArea(){
-        return this.height*this.weight;
+    public int getArea(){
+        return this.height*this.width;
     }
 
-    public int gerPerimeter(){
-        return 2*(this.height + this.weight);
+    public int getPerimeter(){
+        return 2*(this.height + this.width);
     }
 
+
+    //getters and setters
     public void setPosition(int x, int y){
         this.x =x;
         this.y =y;
@@ -39,16 +42,18 @@ public class Rectangle {
         return height;
     }
 
+    // height can not be negative
     public void setHeight(int height) {
-        this.height = height;
+        this.height = Math.abs(height);
     }
 
-    public int getWeight() {
-        return weight;
+    public int getWidth() {
+        return width;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    //width can not be negative
+    public void setWidth(int width) {
+        this.width = Math.abs(width);
     }
 
     public int getX() {
@@ -66,4 +71,6 @@ public class Rectangle {
     public void setY(int y) {
         this.y = y;
     }
+
+
 }
