@@ -13,11 +13,12 @@ public class SquareApp {
         System.out.println("Perimeter= " + square1.getPerimeter());
 
         Square square2 = new Square(7,-1,4);
+        square2.setHeight(9);
         System.out.println(square2);
         System.out.println("Area= " + square2.getArea());
         System.out.println("Perimeter= " + square2.getPerimeter());
         Rectangle rectangle = new Rectangle();
-
+        Rectangle rect = new Square();
 
         System.out.println("Rectangle count: " + Rectangle.getCount()); // 3
         System.out.println("Square count: " + Square.getCount());       // 2

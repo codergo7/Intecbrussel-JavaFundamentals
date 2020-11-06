@@ -37,7 +37,6 @@ public class Rectangle {
         return 2*(this.height + this.width);
     }
 
-
     //getters and setters
     public void setPosition(int x, int y){
         this.x =x;
