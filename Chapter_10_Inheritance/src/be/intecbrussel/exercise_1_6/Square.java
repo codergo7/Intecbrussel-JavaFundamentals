@@ -25,7 +25,7 @@ public class Square extends Rectangle{
     }
 
     public int getSide(){
-        return super.getHeight();
+        return getHeight();
     }
 
     @Override
