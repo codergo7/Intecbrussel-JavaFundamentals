@@ -7,7 +7,7 @@ public class Suv extends Car{
 
 
     public Suv() {
-        this("white", 0, 100,false);
+        this("white", 0, 200,false);
     }
 
     public Suv(String color, int speed, int hp, boolean grillGuard) {
@@ -42,5 +42,11 @@ public class Suv extends Car{
 
     public void setGrillGuard(boolean grillGuard) {
         this.grillGuard = grillGuard;
+    }
+
+    @Override
+    public String toString() {
+        return  super.toString() + ", grillGuard=" + grillGuard +
+                ", grannyGear=" + grannyGear;
     }
 }

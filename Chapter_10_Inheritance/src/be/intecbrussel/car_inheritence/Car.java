@@ -7,7 +7,7 @@ public class Car {
     private int hp;
 
     public Car() {
-        this("white", 0, 100);
+        this("white", 0, 0);
     }
 
     public Car(String color, int speed, int hp) {
@@ -43,4 +43,10 @@ public class Car {
         return hp;
     }
 
+    @Override
+    public String toString() {
+        return  "color='" + color +
+                ", speed=" + speed +
+                ", hp=" + hp;
+    }
 }
