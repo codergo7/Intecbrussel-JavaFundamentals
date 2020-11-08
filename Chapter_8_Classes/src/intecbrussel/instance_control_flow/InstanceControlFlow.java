@@ -15,6 +15,9 @@ public class InstanceControlFlow {
 
         System.out.println("First Instance Block");
     }
+    static {
+        System.out.println("First Static Block");
+    }
 
     private void m2() {
         System.out.println("i= " + i);
@@ -39,6 +42,10 @@ public class InstanceControlFlow {
     {
         m2();
         System.out.println("Second Instance Block");
+    }
+
+    static {
+       System.out.println("First Static Block");
     }
 
     int j=20;
