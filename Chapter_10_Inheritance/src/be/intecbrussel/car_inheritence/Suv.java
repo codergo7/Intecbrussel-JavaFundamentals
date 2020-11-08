@@ -5,7 +5,6 @@ public class Suv extends Car{
     private boolean grillGuard;
     private boolean grannyGear;
 
-
     public Suv() {
         this("white", 0, 200,false);
     }
@@ -17,8 +16,8 @@ public class Suv extends Car{
 
     @Override
     public void accelerate(int amount){
-        if(this.grannyGear&&this.getSpeed()>30){
-            driving4x4(grannyGear);
+        if(this.grannyGear&&this.getSpeed()+amount>30){
+            super.accelerate(30-getSpeed()-getHp()/100);
         }
         else {
             super.accelerate(amount);

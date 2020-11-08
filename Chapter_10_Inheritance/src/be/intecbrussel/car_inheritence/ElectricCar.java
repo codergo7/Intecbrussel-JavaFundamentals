@@ -18,6 +18,11 @@ public class ElectricCar extends Car {
         super.accelerate (amount + this.battery/100-getHp()/100);
     }
 
+    @Override
+    public void slow(int amount){
+        super.slow(amount - this.battery/100+getHp()/100);
+    }
+
     public int getBattery() {
         return battery;
     }

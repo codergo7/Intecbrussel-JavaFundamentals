@@ -45,7 +45,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return  "color='" + color +
+        return  "color=" + color +
                 ", speed=" + speed +
                 ", hp=" + hp;
     }
