@@ -5,6 +5,10 @@ public abstract class Shape{
     private int x;
     private int y;
 
+    {
+        count++;
+    }
+
     public Shape() {
         this(1,1);
     }
