@@ -2,13 +2,13 @@ package be.intecbrussel.car_inheritence;
 
 public class CarApp {
     public static void main(String[] args) {
-        Suv suv = new Suv("red",100,250,true);
-        Cabrio cabrio = new Cabrio("yellow", 100,200,false);
-        ElectricCar electric = new ElectricCar("green",100,200,100);
+        Suv suv = new Suv("red",250);
+        Cabrio cabrio = new Cabrio("yellow", 200);
+        ElectricCar electric = new ElectricCar("green",200,100);
 
-        suv.accelerate(50);
-        cabrio.accelerate(50);
-        electric.accelerate(50);
+        suv.accelerate(150);
+        cabrio.accelerate(150);
+        electric.accelerate(150);
         electric.slow(100);
 
         suv.driving4x4(true);

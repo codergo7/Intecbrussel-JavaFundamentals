@@ -7,20 +7,20 @@ public class Car {
     private int hp;
 
     public Car() {
-        this("white", 0, 0);
+        this("white",  0);
     }
 
-    public Car(String color, int speed, int hp) {
+    public Car(String color, int hp) {
         this.color = color;
-        this.speed = speed;
         this.hp = hp;
     }
 
+    //without setSpeed method
     public void accelerate(int amount){
-        this.speed += (amount + hp/100);
+        this.speed += (Math.abs(amount) + hp/100);
     }
     public void slow(int amount){
-        this.speed -= (amount + hp/100);
+        this.speed -= (Math.abs(amount) + hp/100);
     }
 
     public void park(){

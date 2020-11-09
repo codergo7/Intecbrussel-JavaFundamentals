@@ -5,34 +5,43 @@ public class ElectricCar extends Car {
     private int battery;
 
     public ElectricCar() {
-        this("white", 0, 70,50);
+        this("white",  70, 50);
     }
 
-    public ElectricCar(String color, int speed, int hp, int battery) {
-        super(color, speed, hp);
+    public ElectricCar(String color, int hp, int battery) {
+        super(color,  hp);
         this.battery = battery;
     }
 
+    //without setSpeed method
     @Override
-    public void accelerate(int amount){
-        super.accelerate (amount + this.battery/100-getHp()/100);
+    public void accelerate(int amount) {
+        super.accelerate(Math.abs(amount) + this.battery / 100 - getHp() / 100);
     }
 
+    //without setSpeed method
     @Override
-    public void slow(int amount){
-        super.slow(amount - this.battery/100+getHp()/100);
+    public void slow(int amount) {
+        super.slow(Math.abs(amount) - this.battery / 100 + getHp() / 100);
     }
 
     public int getBattery() {
         return battery;
     }
 
-    public void charge(int battery) {
-        this.battery = battery;
+    public void charge(int amount) {
+        if (this.battery + amount > 100) {
+            this.battery = 100;
+        } else {
+            this.battery += amount;
+
+        }
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", battery=" + battery;
+        return "ElectricCar: " +
+                "battery=" + battery +
+                ", " + super.toString();
     }
 }
