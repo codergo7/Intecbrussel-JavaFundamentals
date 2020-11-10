@@ -1,6 +1,8 @@
-package be.intecbrussel.exercise_7;
+package be.intecbrussel.exercise_8;
 
-public class Triangle extends Shape{
+import java.util.Objects;
+
+public class Triangle extends Shape {
 
     private static int count;
     private int height;
@@ -60,5 +62,32 @@ public class Triangle extends Shape{
 
     public void setPerpendicular(int perpendicular) {
         this.perpendicular = perpendicular;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "height=" + height +
+                ", width=" + width +
+                ", perpendicular=" + perpendicular +
+                super.toString()+ "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Triangle triangle = (Triangle) o;
+        return height == triangle.height &&
+                width == triangle.width &&
+                perpendicular == triangle.perpendicular
+                && getX() == triangle.getX()
+                && getY()== triangle.getY();
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode() + height*31 + width*37 +  perpendicular*41;
     }
 }

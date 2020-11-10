@@ -1,4 +1,4 @@
-package be.intecbrussel.exercise_7;
+package be.intecbrussel.exercise_8;
 
 public class IsoscelesTriangle extends Triangle {
 
@@ -18,5 +18,13 @@ public class IsoscelesTriangle extends Triangle {
     @Override
     public void setPerpendicular(int perpendicular) {
         super.setHeight(perpendicular);
+    }
+
+    @Override
+    public String toString() {
+        return "IsoscelesTriangle{"+
+                "height=" + getHeight() +
+                ", width=" + getHeight() +
+                "x= " + getX() + ", y=" + getY() + "}";
     }
 }
