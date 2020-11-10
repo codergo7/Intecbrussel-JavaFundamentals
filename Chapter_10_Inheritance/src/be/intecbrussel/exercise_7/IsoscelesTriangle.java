@@ -18,5 +18,12 @@ public class IsoscelesTriangle extends Triangle {
     @Override
     public void setPerpendicular(int perpendicular) {
         super.setHeight(perpendicular);
+        super.setPerpendicular(perpendicular);
+    }
+
+    @Override
+    public void setHeight(int height) {
+        super.setHeight(height);
+        super.setPerpendicular(height);
     }
 }
