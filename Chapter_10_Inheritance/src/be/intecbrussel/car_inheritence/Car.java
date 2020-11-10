@@ -18,6 +18,7 @@ public class Car {
     //without setSpeed method
     public void accelerate(int amount){
         this.speed += (Math.abs(amount) + hp/100);
+
     }
     public void slow(int amount){
         this.speed -= (Math.abs(amount) + hp/100);
