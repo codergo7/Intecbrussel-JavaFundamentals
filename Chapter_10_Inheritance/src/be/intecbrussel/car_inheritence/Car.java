@@ -7,7 +7,7 @@ public class Car {
     private int hp;
 
     public Car() {
-        this("white",  0);
+        this("white", 0);
     }
 
     public Car(String color, int hp) {
@@ -16,16 +16,17 @@ public class Car {
     }
 
     //without setSpeed method
-    public void accelerate(int amount){
-        this.speed += (Math.abs(amount) + hp/100);
-
-    }
-    public void slow(int amount){
-        this.speed -= (Math.abs(amount) + hp/100);
+    public void accelerate(int amount) {
+        this.speed += (Math.abs(amount) + hp / 100);
     }
 
-    public void park(){
-        this.speed =0;
+    //without setSpeed method
+    public void slow(int amount) {
+        this.speed -= (Math.abs(amount) + hp / 100);
+    }
+
+    public void park() {
+        this.speed = 0;
     }
 
     public String getColor() {
@@ -46,7 +47,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return  "color=" + color +
+        return "color=" + color +
                 ", speed=" + speed +
                 ", hp=" + hp;
     }
