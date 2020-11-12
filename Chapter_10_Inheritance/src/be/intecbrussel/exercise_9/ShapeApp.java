@@ -2,7 +2,7 @@ package be.intecbrussel.exercise_9;
 
 import be.intecbrussel.exercise_8.*;
 
-public class SquareApp {
+public class ShapeApp {
 
     public static void main(String[] args) {
         Shape[] shapes = {new IsoscelesTriangle(4,5),

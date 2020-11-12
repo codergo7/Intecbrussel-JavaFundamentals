@@ -1,6 +1,6 @@
 package be.intecbrussel.exercise_8;
 
-public class SquareApp {
+public class ShapeApp {
 
     public static void main(String[] args) {
 
