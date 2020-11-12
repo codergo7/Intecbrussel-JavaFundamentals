@@ -88,8 +88,8 @@ public class Rectangle extends Shape {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Rectangle rectangle = (Rectangle) o;
-        return height == rectangle.height &&
-                width == rectangle.width &&
+        return height == rectangle.getHeight() &&
+                width == rectangle.getWidth() &&
                 getX()==rectangle.getX() &&
                 getY()== rectangle.getY();
     }

@@ -79,15 +79,15 @@ public class Triangle extends Shape {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Triangle triangle = (Triangle) o;
-        return height == triangle.height &&
-                width == triangle.width &&
-                perpendicular == triangle.perpendicular
+        return height == triangle.getHeight() &&
+                width == triangle.getWidth() &&
+                perpendicular == triangle.getPerpendicular()
                 && getX() == triangle.getX()
                 && getY()== triangle.getY();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode() + height*31 + width*37 +  perpendicular*41;
+        return super.hashCode() + getHeight()*31 + getWidth()*37 +  getPerpendicular()*41;
     }
 }

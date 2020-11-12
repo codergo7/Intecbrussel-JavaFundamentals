@@ -55,8 +55,8 @@ public abstract class Shape{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Shape shape = (Shape) o;
-        return x == shape.x &&
-                y == shape.y;
+        return x == shape.getX() &&
+                y == shape.getY();
     }
 
     @Override

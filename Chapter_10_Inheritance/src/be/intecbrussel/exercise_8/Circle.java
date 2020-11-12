@@ -57,13 +57,13 @@ public class Circle extends Shape {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Circle circle = (Circle) o;
-        return radius == circle.radius
+        return radius == circle.getRadius()
                 && getX() == circle.getX()
                 && getY()== circle.getY();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode() + radius*19;
+        return super.hashCode() + getRadius()*19;
     }
 }
