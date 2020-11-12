@@ -13,7 +13,7 @@ public class Drawing {
 
     public void add(Shape shape) {
         boolean isPresent = isPresent(shape);
-        if(isPresent){
+        if (isPresent) {
             System.out.println("This shape is already exist in the list");
             return;
         }
@@ -25,21 +25,21 @@ public class Drawing {
     }
 
     private boolean isPresent(Shape shape) {
-        if(size==0) return false;
-        for (int i = 0; i <shapes.length ; i++) {
-            if(shapes[i]!=null && shapes[i].equals(shape)){
+        if (size == 0) return false;
+        for (int i = 0; i < shapes.length; i++) {
+            if (shapes[i] != null && shapes[i].equals(shape)) {
                 return true;
             }
         }
         return false;
     }
 
-    private int getFreeLocation(){
-        if(size==0) return 0;
+    private int getFreeLocation() {
+        if (size == 0) return 0;
         int free = 0;
 
-        for (int i = 0; i <shapes.length ; i++) {
-            if(shapes[i]==null){
+        for (int i = 0; i < shapes.length; i++) {
+            if (shapes[i] == null) {
                 free = i;
                 break;
             }
@@ -51,10 +51,10 @@ public class Drawing {
         if (size == 0) return;
 
         for (int i = 0; i < shapes.length; i++) {
-            if (shapes[i]!=null && shapes[i].equals(shape)) {
-              shapes[i] = null;
-              size--;
-              break;
+            if (shapes[i] != null && shapes[i].equals(shape)) {
+                shapes[i] = null;
+                size--;
+                break;
             }
         }
     }

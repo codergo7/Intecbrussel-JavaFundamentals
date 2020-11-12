@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Rectangle extends Shape {
 
-    public static final int ANGLES =4;
+    public static final int ANGLES = 4;
     public static int count;
 
     private int height;
@@ -15,11 +15,11 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle() {
-        this(1,2,1,1);
+        this(1, 2, 1, 1);
     }
 
     public Rectangle(int height, int width) {
-        this(height,width,1,1);
+        this(height, width, 1, 1);
     }
 
     // height and width can not be negative
@@ -31,23 +31,23 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public double getArea(){
-        return this.height*this.width;
+    public double getArea() {
+        return this.height * this.width;
     }
 
     @Override
-    public double getPerimeter(){
-        return 2*(this.height + this.width);
+    public double getPerimeter() {
+        return 2 * (this.height + this.width);
     }
 
     //getters and setters
-    public void setPosition(int x, int y){
+    public void setPosition(int x, int y) {
         super.setX(x);
         super.setY(y);
     }
 
-    public int[] getPosition(){
-        return new int[]{getX(),getY()};
+    public int[] getPosition() {
+        return new int[]{getX(), getY()};
     }
 
     public int getHeight() {
@@ -69,7 +69,6 @@ public class Rectangle extends Shape {
     }
 
 
-
     public static int getCount() {
         return count;
     }
@@ -78,8 +77,8 @@ public class Rectangle extends Shape {
     public String toString() {
         return "Rectangle{" +
                 "height=" + height +
-                ", width=" + width +" "
-                + super.toString() +"}";
+                ", width=" + width + " "
+                + super.toString() + "}";
     }
 
     @Override
@@ -90,12 +89,12 @@ public class Rectangle extends Shape {
         Rectangle rectangle = (Rectangle) o;
         return height == rectangle.getHeight() &&
                 width == rectangle.getWidth() &&
-                getX()==rectangle.getX() &&
-                getY()== rectangle.getY();
+                getX() == rectangle.getX() &&
+                getY() == rectangle.getY();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode()+ height*23+ width*29;
+        return super.hashCode() + height * 23 + width * 29;
     }
 }

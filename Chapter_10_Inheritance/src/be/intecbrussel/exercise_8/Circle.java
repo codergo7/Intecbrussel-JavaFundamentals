@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Circle extends Shape {
 
-    public static final int ANGLES =0;
+    public static final int ANGLES = 0;
     public static int count;
     private int radius;
 
@@ -13,7 +13,7 @@ public class Circle extends Shape {
     }
 
 
-    public Circle(Circle circle){
+    public Circle(Circle circle) {
         this(circle.getRadius(), circle.getX(), circle.getY());
     }
 
@@ -28,12 +28,12 @@ public class Circle extends Shape {
 
     @Override
     public double getArea() {
-        return radius*radius*Math.PI;
+        return radius * radius * Math.PI;
     }
 
     @Override
     public double getPerimeter() {
-        return 2*radius*Math.PI;
+        return 2 * radius * Math.PI;
     }
 
     public int getRadius() {
@@ -47,7 +47,7 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius  + super.toString() +
+                "radius=" + radius + super.toString() +
                 "}";
     }
 
@@ -59,11 +59,11 @@ public class Circle extends Shape {
         Circle circle = (Circle) o;
         return radius == circle.getRadius()
                 && getX() == circle.getX()
-                && getY()== circle.getY();
+                && getY() == circle.getY();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode() + getRadius()*19;
+        return super.hashCode() + getRadius() * 19;
     }
 }

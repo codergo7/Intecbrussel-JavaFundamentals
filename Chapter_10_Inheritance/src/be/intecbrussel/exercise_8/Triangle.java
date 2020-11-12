@@ -14,10 +14,10 @@ public class Triangle extends Shape {
     }
 
     public Triangle(int width, int height, int perpendicular) {
-        this( width,height,perpendicular,1,1);
+        this(width, height, perpendicular, 1, 1);
     }
 
-    public Triangle( int width,int height,  int perpendicular, int x, int y) {
+    public Triangle(int width, int height, int perpendicular, int x, int y) {
         super(x, y);
         this.width = width;
         this.height = height;
@@ -26,13 +26,13 @@ public class Triangle extends Shape {
 
     @Override
     public double getArea() {
-        return width*height/2;
+        return width * height / 2;
     }
 
     @Override
     public double getPerimeter() {
-        return Math.sqrt(Math.pow(this.width-this.perpendicular,2) + Math.pow(this.height, 2)) +
-                Math.sqrt(Math.pow(this.perpendicular,2) + Math.pow(this.height, 2)) + this.width;
+        return Math.sqrt(Math.pow(this.width - this.perpendicular, 2) + Math.pow(this.height, 2)) +
+                Math.sqrt(Math.pow(this.perpendicular, 2) + Math.pow(this.height, 2)) + this.width;
     }
 
     // getters and setters
@@ -70,7 +70,7 @@ public class Triangle extends Shape {
                 "height=" + height +
                 ", width=" + width +
                 ", perpendicular=" + perpendicular +
-                super.toString()+ "}";
+                super.toString() + "}";
     }
 
     @Override
@@ -83,11 +83,11 @@ public class Triangle extends Shape {
                 width == triangle.getWidth() &&
                 perpendicular == triangle.getPerpendicular()
                 && getX() == triangle.getX()
-                && getY()== triangle.getY();
+                && getY() == triangle.getY();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode() + getHeight()*31 + getWidth()*37 +  getPerpendicular()*41;
+        return super.hashCode() + getHeight() * 31 + getWidth() * 37 + getPerpendicular() * 41;
     }
 }

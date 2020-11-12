@@ -2,7 +2,7 @@ package be.intecbrussel.exercise_8;
 
 import java.util.Objects;
 
-public abstract class Shape{
+public abstract class Shape {
     private static int count;
     private int x;
     private int y;
@@ -12,7 +12,7 @@ public abstract class Shape{
     }
 
     public Shape() {
-        this(1,1);
+        this(1, 1);
     }
 
     public Shape(int x, int y) {
@@ -47,7 +47,7 @@ public abstract class Shape{
 
     @Override
     public String toString() {
-        return  "x= " + x + ", y=" + y;
+        return "x= " + x + ", y=" + y;
     }
 
     @Override
@@ -61,6 +61,6 @@ public abstract class Shape{
 
     @Override
     public int hashCode() {
-        return x*13 + y * 17;
+        return x * 13 + y * 17;
     }
 }

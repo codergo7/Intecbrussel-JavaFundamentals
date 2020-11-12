@@ -13,11 +13,15 @@ public class DrawingApp {
         drawing.add(new Square(9));
         drawing.add(new Triangle(10,11,12));
         drawing.add(new Circle(13));
+        System.out.println("Size: " + drawing.getSize());
 
-        System.out.println(drawing.getSize());
+        drawing.add(new Circle(13));
+
+        System.out.println("Size: " + drawing.getSize());
 
         drawing.remove(new Square(9));
-        System.out.println(drawing.getSize());
+        System.out.println("Size after remove: " + drawing.getSize());
+
 
     }
 }
