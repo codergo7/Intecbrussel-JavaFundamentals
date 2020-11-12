@@ -2,27 +2,40 @@ package be.intecbrussel.exercise_8;
 
 public class IsoscelesTriangle extends Triangle {
 
+    private static int count;
+
+    {
+        count++;
+    }
+
     public IsoscelesTriangle(int width, int height) {
-        super(width, height, height);
+        super(width, height, width / 2);
     }
 
     public IsoscelesTriangle(int width, int height, int x, int y) {
-        super(width, height, height, x, y);
+        super(width, height, width / 2, x, y);
     }
 
-    @Override
-    public double getPerimeter() {
-        return getWidth() + Math.sqrt(Math.pow(getWidth()/2,2)+ Math.pow(getHeight(),2));
-    }
 
     @Override
     public void setPerpendicular(int perpendicular) {
-        super.setHeight(perpendicular);
+        super.setPerpendicular(perpendicular);
+        super.setWidth(2 * perpendicular);
+    }
+
+    @Override
+    public void setWidth(int width) {
+        super.setWidth(width);
+        super.setPerpendicular(width / 2);
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override
     public String toString() {
-        return "IsoscelesTriangle{"+
+        return "IsoscelesTriangle{" +
                 "height=" + getHeight() +
                 ", width=" + getHeight() +
                 "x= " + getX() + ", y=" + getY() + "}";

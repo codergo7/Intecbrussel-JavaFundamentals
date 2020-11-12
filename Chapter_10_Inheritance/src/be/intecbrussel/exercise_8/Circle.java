@@ -36,6 +36,10 @@ public class Circle extends Shape {
         return 2 * radius * Math.PI;
     }
 
+    public void grow(int d) {
+        this.radius = Math.abs(d);
+    }
+
     public int getRadius() {
         return radius;
     }
@@ -43,6 +47,7 @@ public class Circle extends Shape {
     public void setRadius(int radius) {
         this.radius = radius;
     }
+
 
     @Override
     public String toString() {

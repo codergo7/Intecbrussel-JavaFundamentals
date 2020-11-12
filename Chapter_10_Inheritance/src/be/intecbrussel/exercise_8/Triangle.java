@@ -31,8 +31,13 @@ public class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
+        double hypotenuse1 = Math.hypot(this.height, this.perpendicular);
+        double hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
+        return this.width + hypotenuse1 + hypotenuse2;
+     /*
         return Math.sqrt(Math.pow(this.width - this.perpendicular, 2) + Math.pow(this.height, 2)) +
                 Math.sqrt(Math.pow(this.perpendicular, 2) + Math.pow(this.height, 2)) + this.width;
+         */
     }
 
     // getters and setters

@@ -53,7 +53,10 @@ public abstract class Shape {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+
+        if (!(o instanceof Shape)) return false;
+        //if (o == null || getClass() != o.getClass()) return false;
+
         Shape shape = (Shape) o;
         return x == shape.getX() &&
                 y == shape.getY();
