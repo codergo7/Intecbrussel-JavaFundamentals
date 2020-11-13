@@ -2,6 +2,8 @@ package be.intecbrussel.exercise_10;
 
 import be.intecbrussel.exercise_8.Shape;
 
+import java.util.Arrays;
+
 public class Drawing {
 
     private Shape[] shapes;
@@ -12,20 +14,32 @@ public class Drawing {
     }
 
     public void add(Shape shape) {
-        boolean isPresent = isPresent(shape);
-        if (isPresent) {
-            System.out.println("This shape is already exist in the list");
-            return;
+        if(size==shapes.length-5){
+            enlargeList();
         }
-
-        if (size < 100) {
-            shapes[getFreeLocation()] = shape;
+        int index;
+        boolean bool = isPresent(shape);
+        if (!(bool = isPresent(shape)) && (index = getFreeLocation()) != -1) {
+            shapes[index] = shape;
             size++;
         }
+
+         /*  int index;
+        boolean bool;
+
+        // inside if initialization
+        if (!(bool = isPresent(shape)) & (index= getFreeLocation()) == -1) {
+            return;
+        }
+       */
     }
 
+    private void enlargeList() {
+        shapes = Arrays.copyOf(shapes,shapes.length+50);
+    }
+
+    // checks whether shape parameter is the shapes list
     private boolean isPresent(Shape shape) {
-        if (size == 0) return false;
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i] != null && shapes[i].equals(shape)) {
                 return true;
@@ -34,22 +48,17 @@ public class Drawing {
         return false;
     }
 
+    //
     private int getFreeLocation() {
-        if (size == 0) return 0;
-        int free = 0;
-
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i] == null) {
-                free = i;
-                break;
+                return i;
             }
         }
-        return free;
+        return -1;
     }
 
     public void remove(Shape shape) {
-        if (size == 0) return;
-
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i] != null && shapes[i].equals(shape)) {
                 shapes[i] = null;
@@ -85,7 +94,8 @@ public class Drawing {
         }
     */
     public void clear() {
-        shapes = new Shape[100];
+        Arrays.fill(shapes, null);
+        //shapes = new Shape[100];
         size = 0;
     }
 
@@ -95,5 +105,12 @@ public class Drawing {
 
     public Shape[] getShapes() {
         return shapes;
+    }
+
+    @Override
+    public String toString() {
+        return "Drawing{" +
+                "shapes=" + Arrays.toString(shapes) +
+                '}';
     }
 }
