@@ -104,6 +104,6 @@ public class Triangle extends Shape {
 
     @Override
     public void draw(DrawingContext dc) {
-
+        dc.draw(this);
     }
 }

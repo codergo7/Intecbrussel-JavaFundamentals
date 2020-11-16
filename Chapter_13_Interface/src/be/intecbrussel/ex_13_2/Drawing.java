@@ -68,31 +68,6 @@ public class Drawing implements Drawable {
         }
     }
 
-    /*
-        public void remove(Shape shape){
-            if(size==0) return;
-
-            for(int i=0; i<shapes.length;i++){
-                if(shapes[i].equals(shape)){
-                    rearrangeArray(i);
-                    i--;
-                }
-            }
-        }
-
-        private void rearrangeArray(int removedIndex) {
-            Shape[] shapes1 = new Shape[100];
-            for (int i = 0, j =0; i < shapes.length; i++,j++) {
-                if(i==removedIndex){
-                    this.size--;
-                    j--;
-                    continue;
-                }
-                shapes1[j] = shapes1[i];
-            }
-            shapes =shapes1;
-        }
-    */
     public void clear() {
         Arrays.fill(shapes, null);
         //shapes = new Shape[100];
@@ -116,7 +91,11 @@ public class Drawing implements Drawable {
 
     @Override
     public void draw(DrawingContext dc) {
-       // dc.draw(this);
+      for (Drawable drawable : shapes){
+          if(drawable != null){
+              drawable.draw(dc);
+          }
+      }
     }
 
     @Override

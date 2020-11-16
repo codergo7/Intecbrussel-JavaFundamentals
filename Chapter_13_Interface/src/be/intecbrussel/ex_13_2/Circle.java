@@ -78,6 +78,6 @@ public class Circle extends Shape {
 
     @Override
     public void draw(DrawingContext dc) {
-
+        dc.draw(this);
     }
 }

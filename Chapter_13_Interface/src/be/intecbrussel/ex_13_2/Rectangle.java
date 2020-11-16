@@ -105,6 +105,6 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw(DrawingContext dc) {
-
+        dc.draw(this);
     }
 }

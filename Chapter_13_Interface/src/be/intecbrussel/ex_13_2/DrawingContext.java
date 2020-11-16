@@ -2,15 +2,9 @@ package be.intecbrussel.ex_13_2;
 
 public interface DrawingContext {
 
+    void draw(Rectangle rectangle);
 
-
-    default void draw(Rectangle rectangle) {
-
-    }
-
-    default void draw(Circle circle) {
-
-    }
+    void draw(Circle circle);
 
     default void draw(Triangle triangle) {
 
