@@ -1,4 +1,4 @@
-package be.intecbrussel.exercise_1;
+package be.intecbrussel.ex_13_1;
 
 public abstract class Shape {
     private static int count;
