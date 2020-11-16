@@ -96,13 +96,15 @@ public class Rectangle extends Shape {
         return super.hashCode() + height * 23 + width * 29;
     }
 
-    @Override
-    public void draw() {
-
-    }
 
     @Override
     public void scale(int s) {
+        setHeight(this.height*s/100);
+        setWidth(this.width*s/100);
+    }
+
+    @Override
+    public void draw(DrawingContext dc) {
 
     }
 }

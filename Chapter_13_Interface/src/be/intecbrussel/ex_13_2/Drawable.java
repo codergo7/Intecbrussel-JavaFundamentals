@@ -4,5 +4,5 @@ import be.intecbrussel.ex_13_1.Scaleable;
 
 public interface Drawable extends Scaleable {
 
-    void draw();
+    void draw(DrawingContext dc);
 }

@@ -70,13 +70,14 @@ public class Circle extends Shape {
         return super.hashCode() + getRadius() * 19;
     }
 
-    @Override
-    public void draw() {
-
-    }
 
     @Override
     public void scale(int s) {
+        this.radius*= ((double)s)/100;
+    }
+
+    @Override
+    public void draw(DrawingContext dc) {
 
     }
 }

@@ -94,13 +94,16 @@ public class Triangle extends Shape {
         return super.hashCode() + getHeight() * 31 + getWidth() * 37 + getPerpendicular() * 41;
     }
 
-    @Override
-    public void draw() {
-
-    }
 
     @Override
     public void scale(int s) {
+        this.height *= ((double) s)/100;
+        this.width *= ((double) s)/100;
+        this.perpendicular *= ((double) s)/100;
+    }
+
+    @Override
+    public void draw(DrawingContext dc) {
 
     }
 }
