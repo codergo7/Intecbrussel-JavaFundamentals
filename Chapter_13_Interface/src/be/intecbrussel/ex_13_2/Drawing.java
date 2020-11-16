@@ -100,6 +100,10 @@ public class Drawing implements Drawable {
 
     @Override
     public void scale(int s) {
-
+        for (Drawable drawable : shapes){
+            if(drawable != null){
+                drawable.scale(s);
+            }
+        }
     }
 }
