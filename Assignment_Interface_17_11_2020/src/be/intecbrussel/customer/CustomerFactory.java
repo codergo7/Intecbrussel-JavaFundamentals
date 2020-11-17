@@ -6,14 +6,18 @@ public class CustomerFactory {
             "Mustafa", "Anthony", "Ali", "Audric", "Axel", "Dieter", "Kevin", "Salai", "Gokhan"};
 
 
+    // if the name is in de list,
+    // creates an instance of RealCustomer using name as parameter then returns it
+    //otherwise creates an instance of NullCustomer and returns it
     public static AbstractCustomer getCustomer(String name) {
-        if (isInsideNAMES(name)) {
+        if (isInsideTheNAMES(name)) {
             return new RealCustomer(name);
         }
         return new NullCustomer();
     }
 
-    private static boolean isInsideNAMES(String name) {
+    //if the parameter name is inside the NAMES list, it returns true, otherwise false.
+    private static boolean isInsideTheNAMES(String name) {
         for (String n : NAMES) {
             if (n.equals(name)) {
                 return true;
