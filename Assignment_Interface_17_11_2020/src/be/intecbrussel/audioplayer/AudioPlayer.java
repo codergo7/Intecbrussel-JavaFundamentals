@@ -19,7 +19,7 @@ public class AudioPlayer implements MediaPlayer {
         System.out.println("Playing mp3 file. Name: " + fileName);
     }
 
-    private MediaAdapter createAnInstanceOfMediaAdapter(String audioType){
+    private MediaAdapter createAnInstanceOfMediaAdapter(String audioType) {
         return new MediaAdapter(audioType);
     }
 }
