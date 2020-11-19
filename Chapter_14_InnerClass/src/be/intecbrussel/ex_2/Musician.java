@@ -8,6 +8,7 @@ public class Musician {
             public String toString() {
                 return "The instrument makes a sound";
             }
+
         }
         return new Instrument();
     }
