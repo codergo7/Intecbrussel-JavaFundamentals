@@ -4,7 +4,6 @@ public class Musician {
 
     public void play(){
         Instrument instrument = new Instrument();
-        System.out.println("Musician plays an instrument");
         instrument.makeSound();
     }
 
@@ -12,6 +11,11 @@ public class Musician {
 
         public void makeSound(){
             System.out.println("The instrument makes a sound\n");
+        }
+
+        public void makeNoise(){
+            System.out.println("The instrument makes a noise");
+
         }
     }
 }

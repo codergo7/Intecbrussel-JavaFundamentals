@@ -7,6 +7,6 @@ public class MusicianApp {
         musician.play();
 
         Musician.Instrument instrument = musician.new Instrument();
-        instrument.makeSound();
+        instrument.makeNoise();
     }
 }
