@@ -2,18 +2,18 @@ package be.intecbrussel.ex_1;
 
 public class Musician {
 
-    public void play(){
+    public void play() {
         Instrument instrument = new Instrument();
         instrument.makeSound();
     }
 
-    class Instrument{
+    class Instrument {
 
-        public void makeSound(){
+        public void makeSound() {
             System.out.println("The instrument makes a sound\n");
         }
 
-        public void makeNoise(){
+        public void makeNoise() {
             System.out.println("The instrument makes a noise");
 
         }
