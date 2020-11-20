@@ -1,8 +1,9 @@
 package be.intecbrussel.ex_4;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class Drawing implements Drawable {
+public class Drawing implements Drawable, Iterable<Drawable> {
 
     private Drawable[] shapes;
     private int size;
@@ -22,14 +23,6 @@ public class Drawing implements Drawable {
             size++;
         }
 
-         /*  int index;
-        boolean bool;
-
-        // inside if initialization
-        if (!(bool = isPresent(shape)) & (index= getFreeLocation()) == -1) {
-            return;
-        }
-       */
     }
 
     private void enlargeList() {
@@ -104,4 +97,29 @@ public class Drawing implements Drawable {
             }
         }
     }
+
+    @Override
+    public Iterator iterator() {
+
+      //???
+
+        return new DrawableIterator();
+    }
+    class DrawableIterator implements Iterator<Drawable>{
+
+        private int index;
+
+        @Override
+        public boolean hasNext() {
+
+            return getSize()>index;
+        }
+
+        @Override
+        public Drawable next() {
+            return shapes[index++];
+        }
+    }
+
+
 }
