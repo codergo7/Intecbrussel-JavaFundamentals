@@ -3,6 +3,7 @@ package be.intecbrussel.ex_3;
 public class Musician {
 
     public Instrument getInstrument() {
+
         class Guitar implements Instrument {
 
             @Override

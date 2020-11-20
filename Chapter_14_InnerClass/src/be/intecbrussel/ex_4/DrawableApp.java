@@ -23,6 +23,12 @@ public class DrawableApp {
             System.out.println(iterator.next());
         }
 
+        System.out.println("*******************************************");
+
+        for(Drawable drawable : drawing){
+            System.out.println(drawable);
+        }
+
 
     }
 }
