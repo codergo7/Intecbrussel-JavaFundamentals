@@ -104,19 +104,24 @@ public class Drawing implements Drawable, Iterable<Drawable> {
 
         return new DrawableIterator();
     }
-    class DrawableIterator implements Iterator<Drawable>{
+    public class DrawableIterator implements Iterator<Drawable>{
 
-        private int index;
+        private int index = -1;
 
         @Override
         public boolean hasNext() {
-
-            return getSize()>index;
+            for (int i = index +1; i < shapes.length; i++) {
+                if(shapes[i]!= null){
+                    index =i;
+                    return true;
+                }
+            }
+            return false;
         }
 
         @Override
         public Drawable next() {
-            return shapes[index++];
+            return shapes[index];
         }
     }
 
