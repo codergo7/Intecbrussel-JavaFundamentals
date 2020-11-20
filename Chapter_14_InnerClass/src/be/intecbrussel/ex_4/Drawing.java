@@ -39,7 +39,7 @@ public class Drawing implements Drawable, Iterable<Drawable> {
         return false;
     }
 
-    //
+    // gets first index of null value in de shapes array
     private int getFreeLocation() {
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i] == null) {
@@ -59,6 +59,7 @@ public class Drawing implements Drawable, Iterable<Drawable> {
         }
     }
 
+    // fills null in all shapes array
     public void clear() {
         Arrays.fill(shapes, null);
         //shapes = new Shape[100];
@@ -100,8 +101,6 @@ public class Drawing implements Drawable, Iterable<Drawable> {
 
     @Override
     public Iterator iterator() {
-
-      //???
 
         return new DrawableIterator();
     }
