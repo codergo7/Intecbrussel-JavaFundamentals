@@ -10,11 +10,13 @@ public class Musician {
     public class Instrument {
 
         public void makeSound() {
+
             System.out.println("The instrument makes a sound\n");
         }
 
         public void makeNoise() {
-            System.out.println("The instrument makes a noise");
+
+            System.out.println("The instrument makes noise");
 
         }
     }
