@@ -14,7 +14,7 @@ public class Division {
             int div = num / den;
 
             System.out.format("%d/%d=%d", num, den, div);
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("Invalid number");
             //main(new String[]{});
         }
