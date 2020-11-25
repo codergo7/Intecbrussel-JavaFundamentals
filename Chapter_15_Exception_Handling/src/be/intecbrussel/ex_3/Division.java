@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_2;
+package be.intecbrussel.ex_3;
 
 import java.util.Scanner;
 
@@ -20,6 +20,10 @@ public class Division {
             System.out.println(nfe.getMessage());
             nfe.printStackTrace();
 
+            //main(new String[]{});
+
+        } catch (ArithmeticException a) {
+            System.out.println("Division by zero. ");
             //main(new String[]{});
         }
     }
