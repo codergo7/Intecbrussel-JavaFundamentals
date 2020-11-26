@@ -2,7 +2,7 @@ package be.intecbrussel.ex_3;
 
 import java.util.Scanner;
 
-public class Division {
+public class Division_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -11,10 +11,9 @@ public class Division {
             int num = Integer.parseInt(scanner.next());
             System.out.println("Enter second number: ");
             int den = Integer.parseInt(scanner.next());
-            int div = num / den;
-
-            System.out.format("%d/%d=%d", num, den, div);
             scanner.close();
+            int div = divide(num,den);
+            System.out.format("%d/%d=%d", num, den, div);
         } catch (NumberFormatException nfe) {
             System.out.println("Invalid number");
             System.out.println(nfe.getMessage());
@@ -26,5 +25,10 @@ public class Division {
             System.out.println("Division by zero. ");
             //main(new String[]{});
         }
+    }
+
+    private static int divide(int num, int den) {
+
+        return num / den;
     }
 }

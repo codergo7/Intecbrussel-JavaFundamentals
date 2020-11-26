@@ -1,8 +1,8 @@
-package be.intecbrussel.ex_1;
+package be.intecbrussel.ex_2;
 
 import java.util.Scanner;
 
-public class Division {
+public class Division_2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -12,20 +12,19 @@ public class Division {
             System.out.println("Enter second number: ");
             int den = Integer.parseInt(scanner.next());
             scanner.close();
-
-            int div = divide(num, den);
+            int div = divide(num,den);
             System.out.format("%d/%d=%d", num, den, div);
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException nfe) {
             System.out.println("Invalid number");
+            System.out.println(nfe.getMessage());
+            nfe.printStackTrace();
+
             //main(new String[]{});
         }
-
     }
 
     private static int divide(int num, int den) {
 
-        return num / den;
+        return num/den;
     }
-
-
 }
