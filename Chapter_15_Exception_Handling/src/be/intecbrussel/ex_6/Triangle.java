@@ -15,8 +15,17 @@ public class Triangle extends Shape {
         this(width, height, perpendicular, 1, 1);
     }
 
-    public Triangle(int width, int height, int perpendicular, int x, int y) {
+    public Triangle(int width, int height, int perpendicular, int x, int y) throws NegativeSizeException {
         super(x, y);
+        if(height<0){
+            throw new NegativeSizeException("Height can not be negative");
+        }
+        if(width<0){
+            throw new NegativeSizeException("Width can not be negative");
+        }
+        if(perpendicular<0){
+            throw new NegativeSizeException("Perpendicular can not be negative");
+        }
         this.width = width;
         this.height = height;
         this.perpendicular = perpendicular;
@@ -32,10 +41,7 @@ public class Triangle extends Shape {
         double hypotenuse1 = Math.hypot(this.height, this.perpendicular);
         double hypotenuse2 = Math.hypot(this.height, (this.width - this.perpendicular));
         return this.width + hypotenuse1 + hypotenuse2;
-     /*
-        return Math.sqrt(Math.pow(this.width - this.perpendicular, 2) + Math.pow(this.height, 2)) +
-                Math.sqrt(Math.pow(this.perpendicular, 2) + Math.pow(this.height, 2)) + this.width;
-         */
+
     }
 
     // getters and setters
@@ -47,7 +53,10 @@ public class Triangle extends Shape {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(int height) throws NegativeSizeException {
+        if(height<0){
+            throw new NegativeSizeException("Height can not be negative");
+        }
         this.height = height;
     }
 
@@ -56,6 +65,9 @@ public class Triangle extends Shape {
     }
 
     public void setWidth(int width) {
+        if(width<0){
+            throw new NegativeSizeException("Width can not be negative");
+        }
         this.width = width;
     }
 
@@ -64,6 +76,9 @@ public class Triangle extends Shape {
     }
 
     public void setPerpendicular(int perpendicular) {
+        if(perpendicular<0){
+            throw new NegativeSizeException("Perpendicular can not be negative");
+        }
         this.perpendicular = perpendicular;
     }
 

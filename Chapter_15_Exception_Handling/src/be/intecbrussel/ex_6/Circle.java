@@ -15,12 +15,18 @@ public class Circle extends Shape {
         this(circle.getRadius(), circle.getX(), circle.getY());
     }
 
-    public Circle(int radius) {
+    public Circle(int radius) throws NegativeSizeException {
+        if (radius < 0) {
+            throw new NegativeSizeException("Radius can not be negative");
+        }
         this.radius = radius;
     }
 
-    public Circle(int radius, int x, int y) {
+    public Circle(int radius, int x, int y) throws NegativeSizeException {
         super(x, y);
+        if (radius < 0) {
+            throw new NegativeSizeException("Radius can not be negative");
+        }
         this.radius = radius;
     }
 
@@ -34,15 +40,14 @@ public class Circle extends Shape {
         return 2 * radius * Math.PI;
     }
 
-    public void grow(int d) {
-        this.radius = Math.abs(d);
-    }
-
     public int getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(int radius) throws NegativeSizeException {
+        if (radius < 0) {
+            throw new NegativeSizeException("Radius can not be negative");
+        }
         this.radius = radius;
     }
 

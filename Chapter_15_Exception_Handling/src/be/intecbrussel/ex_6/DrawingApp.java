@@ -8,11 +8,27 @@ public class DrawingApp {
 
         Drawing drawing = new Drawing();
 
-        for (int i = 0; i < 500; i++) {
+      for (int i = 0; i < 20; i++) {
             drawing.add(randomFillDrawingWithShapes());
         }
-        System.out.println(drawing);
-        System.out.println(drawing.getSize());
+
+      try {
+          for (Shape shape: drawing.getShapes()){
+              if(shape instanceof Circle){
+                  ((Circle) shape).setRadius(-5);
+              }
+              else if (shape instanceof Rectangle) {
+                  ((Rectangle) shape).setHeight(-10);
+              }
+              else {
+                  ((Triangle) shape).setHeight(-7);
+              }
+          }
+      } catch (NegativeSizeException e){
+          System.out.println(e.getMessage());
+          e.printStackTrace();
+      }
+
 
 
 

@@ -21,9 +21,15 @@ public class Rectangle extends Shape {
     }
 
     // height and width can not be negative
-    public Rectangle(int height, int weight, int x, int y) {
-        this.height = Math.abs(height);
-        this.width = Math.abs(weight);
+    public Rectangle(int height, int width, int x, int y) throws NegativeSizeException {
+        if(height<0){
+            throw new NegativeSizeException("Height can not be negative");
+        }
+        if(width<0){
+            throw new NegativeSizeException("Width can not be negative");
+        }
+        this.height = height;
+        this.width = width;
         super.setX(x);
         super.setY(y);
     }
@@ -53,8 +59,11 @@ public class Rectangle extends Shape {
     }
 
     // height can not be negative
-    public void setHeight(int height) {
-        this.height = Math.abs(height);
+    public void setHeight(int height) throws NegativeSizeException {
+        if(height<0){
+            throw new NegativeSizeException("Height can not be negative");
+        }
+        this.height = height;
     }
 
     public int getWidth() {
@@ -63,7 +72,10 @@ public class Rectangle extends Shape {
 
     //width can not be negative
     public void setWidth(int width) {
-        this.width = Math.abs(width);
+        if(width<0){
+            throw new NegativeSizeException("Height can not be negative");
+        }
+        this.width = width;
     }
 
 
