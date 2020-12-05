@@ -5,16 +5,16 @@ import java.util.Date;
 public class Client {
 
     private String name;
-    private Date birthday;
+    private int birthYear;
     private int money;
 
-    public Client(String name, Date birthday) {
-        this(name,birthday,0);
+    public Client(String name, int birthYear) {
+        this(name,birthYear,0);
     }
 
-    public Client(String name, Date birthday, int money) {
+    public Client(String name, int birthYear, int money) {
         this.name = name;
-        this.birthday = birthday;
+        this.birthYear = birthYear;
         this.money = money;
     }
 
@@ -26,12 +26,12 @@ public class Client {
         this.name = name;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public int getBirthYear() {
+        return birthYear;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
     }
 
     public int getMoney() {
@@ -46,6 +46,6 @@ public class Client {
     public String toString() {
         return "Client:" +
                 "name='" + name + '\'' +
-                ", birthday=" + birthday;
+                ", birthday=" + birthYear;
     }
 }
