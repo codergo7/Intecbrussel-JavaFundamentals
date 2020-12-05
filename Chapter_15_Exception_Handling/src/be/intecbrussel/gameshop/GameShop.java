@@ -16,8 +16,14 @@ public class GameShop {
         this.vendor = vendor;
     }
 
-    public void buyGame(Client client, Game game) throws EmptyStockException, TooYoungToGameException, GameNotFoundException {
+    public void buyGame(Client client, Game game) throws EmptyStockException, TooYoungToGameException, GameNotFoundException, NotEnoughMoneyException {
         clientAgeCheck(client, game);
+        clientMoneyCheck(client,game);
+    }
+
+    private void clientMoneyCheck(Client client, Game game) throws NotEnoughMoneyException {
+        if(client.getMoney()< game.getPrice());
+        throw new NotEnoughMoneyException("You have no enough money.");
     }
 
     private void clientAgeCheck(Client client, Game game) throws EmptyStockException, TooYoungToGameException, GameNotFoundException {
@@ -26,7 +32,7 @@ public class GameShop {
             stock.soldGame(game);
         }
         else{
-            throw new TooYoungToGameException();
+            throw new TooYoungToGameException("You can not buy any game. Because you are too young");
         }
     }
 
@@ -49,7 +55,8 @@ public class GameShop {
     public enum Game {
         GHOST("Ghost",100),
         WATCH_DOGS_LEGION("Watch Dog Legion",120),
-        COLD_WAR("Cold War",160);
+        COLD_WAR("Cold War",160),
+        FIFA_21("Fifa 21",130);
 
         private String name;
         private int price;
@@ -81,7 +88,11 @@ public class GameShop {
         private int ghostAmount;
         private int coldWarAmount;
         private int watchDogAmount;
+        private Game[] games;
 
+        public Stock() {
+            this.games = new Game[20];
+        }
 
         public void soldGame(Game game) throws EmptyStockException, GameNotFoundException {
 
@@ -95,6 +106,17 @@ public class GameShop {
                 prepareWatchDog();
             }
             else throw new  GameNotFoundException("We don't have this game");
+
+            deleteFromStock(game);
+        }
+
+        private void deleteFromStock(Game game) {
+            for(int i=0; i< games.length;i++){
+                if(games[i]!=null && games[i].equals(game)){
+                    games[i] = null;
+                    return;
+                }
+            }
         }
 
         private void prepareColdWar() throws EmptyStockException {
@@ -116,6 +138,28 @@ public class GameShop {
             else throw new EmptyStockException("No more Watch Dog Legion in the stock.");
         }
 
+        public Game[] getGames() {
+            return games;
+        }
+
+        public void setGames(Game[] games) {
+            this.games = games;
+            rearrangeAmounts(games);
+        }
+
+        private void rearrangeAmounts(Game[] games) {
+            for(Game game:games){
+                if(game.equals(Game.GHOST)){
+                    setGhostAmount(getGhostAmount()+1);
+                }
+                else if(game.equals(Game.COLD_WAR)){
+                    setColdWarAmount(getColdWarAmount()+1);
+                }
+                else if(game.equals(Game.WATCH_DOGS_LEGION)){
+                    setWatchDogAmount(getWatchDogAmount()+1);
+                }
+            }
+        }
 
         public int getGhostAmount() {
             return ghostAmount;
