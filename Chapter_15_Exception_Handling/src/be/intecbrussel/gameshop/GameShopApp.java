@@ -14,13 +14,11 @@ public class GameShopApp {
         Client client2 = new Client("Jhon",2009,100);
         Client client3 = new Client("Angelina",1990,50);
 
-
         gameBuy(gameShop,client1, GameShop.Game.GHOST);
         gameBuy(gameShop,client1, GameShop.Game.GHOST);
         gameBuy(gameShop,client1, GameShop.Game.FIFA_21);
         gameBuy(gameShop,client2, GameShop.Game.COLD_WAR);
         gameBuy(gameShop,client3, GameShop.Game.WATCH_DOGS_LEGION);
-
 
     }
 
