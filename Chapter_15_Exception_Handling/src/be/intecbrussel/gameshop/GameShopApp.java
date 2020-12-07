@@ -1,9 +1,6 @@
 package be.intecbrussel.gameshop;
 
-import be.intecbrussel.gameshop.exception.EmptyStockException;
-import be.intecbrussel.gameshop.exception.GameNotFoundException;
-import be.intecbrussel.gameshop.exception.NotEnoughMoneyException;
-import be.intecbrussel.gameshop.exception.TooYoungToGameException;
+import be.intecbrussel.gameshop.exception.*;
 
 public class GameShopApp {
     public static void main(String[] args) {
@@ -30,7 +27,7 @@ public class GameShopApp {
     private static void gameBuy(GameShop gameShop,Client client1, GameShop.Game game) {
 
         try {
-            gameShop.buyGame(client1, game.getName());
+            gameShop.buyGame(client1, game);
         } catch (EmptyStockException ese) {
             System.out.println(ese.getMessage());
             ese.printStackTrace();
@@ -43,6 +40,10 @@ public class GameShopApp {
         } catch (NotEnoughMoneyException neme) {
             System.out.println(neme.getMessage());
             neme.printStackTrace();
+        }
+        catch (GameException ge) {
+            System.out.println("Game exception");
+
         }
     }
 }
