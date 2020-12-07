@@ -1,17 +1,22 @@
 package be.intecbrussel.gameshop;
 
+import be.intecbrussel.gameshop.exception.EmptyStockException;
+import be.intecbrussel.gameshop.exception.GameNotFoundException;
+import be.intecbrussel.gameshop.exception.NotEnoughMoneyException;
+import be.intecbrussel.gameshop.exception.TooYoungToGameException;
+
 public class GameShopApp {
     public static void main(String[] args) {
 
         GameShop gameShop = new GameShop();
-        GameShop.Stock stock = gameShop.new Stock();
+        Stock stock = new Stock();
         gameShop.setStock(stock);
-        stock.setWatchDogAmount(1);
-        stock.setColdWarAmount(0);
-        stock.setGhostAmount(1);
+        stock.addGame(GameShop.Game.GHOST);
+        stock.addGame(GameShop.Game.COLD_WAR);
+        stock.addGame(GameShop.Game.WATCH_DOGS_LEGION);
 
         Client client1 = new Client("Brad",1990,500);
-        Client client2 = new Client("Jhon",2009,100);
+        Client client2 = new Client("Jhon",2009,200);
         Client client3 = new Client("Angelina",1990,50);
 
         gameBuy(gameShop,client1, GameShop.Game.GHOST);
@@ -25,18 +30,18 @@ public class GameShopApp {
     private static void gameBuy(GameShop gameShop,Client client1, GameShop.Game game) {
 
         try {
-            gameShop.buyGame(client1, game);
+            gameShop.buyGame(client1, game.getName());
         } catch (EmptyStockException ese) {
-            ese.getMessage();
+            System.out.println(ese.getMessage());
             ese.printStackTrace();
         } catch (TooYoungToGameException tytge) {
-            tytge.getMessage();
+            System.out.println(tytge.getMessage());
             tytge.printStackTrace();
         } catch (GameNotFoundException gnfe) {
-            gnfe.getMessage();
+            System.out.println(gnfe.getMessage());
             gnfe.printStackTrace();
         } catch (NotEnoughMoneyException neme) {
-            neme.getMessage();
+            System.out.println(neme.getMessage());
             neme.printStackTrace();
         }
     }
