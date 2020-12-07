@@ -1,6 +1,6 @@
 package be.intecbrussel.gameshop.exception;
 
-public class NotEnoughMoneyException extends Exception{
+public class NotEnoughMoneyException extends GameException{
 
     public NotEnoughMoneyException() {
     }

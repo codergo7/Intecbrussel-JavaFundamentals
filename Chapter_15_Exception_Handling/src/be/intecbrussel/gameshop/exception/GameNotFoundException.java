@@ -1,6 +1,6 @@
 package be.intecbrussel.gameshop.exception;
 
-public class GameNotFoundException extends Exception {
+public class GameNotFoundException extends GameException {
 
     public GameNotFoundException() {
     }
