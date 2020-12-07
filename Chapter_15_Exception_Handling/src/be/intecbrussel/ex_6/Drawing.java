@@ -1,6 +1,8 @@
 package be.intecbrussel.ex_6;
 
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Drawing {
 
@@ -110,5 +112,30 @@ public class Drawing {
         return "Drawing{" +
                 "shapes=" + Arrays.toString(shapes) +
                 '}';
+    }
+
+    class DrawableIterator implements Iterator<Shape> {
+        private int index = -1;
+
+        @Override
+        public boolean hasNext() {
+            for (int i = index +1; i < shapes.length; i++) {
+                if(shapes[i] != null){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public Shape next() throws NoSuchElementException {
+            for (int i = index+1; i < getShapes().length; i++) {
+                if(shapes[i] != null){
+                    index = i;
+                    return shapes[i];
+                }
+            }
+            throw new NoSuchElementException("No figure left in the drawing");
+        }
     }
 }
