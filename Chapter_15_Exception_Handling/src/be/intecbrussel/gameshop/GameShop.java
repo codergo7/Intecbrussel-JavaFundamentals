@@ -1,9 +1,6 @@
 package be.intecbrussel.gameshop;
 
-import be.intecbrussel.gameshop.exception.EmptyStockException;
-import be.intecbrussel.gameshop.exception.GameNotFoundException;
-import be.intecbrussel.gameshop.exception.NotEnoughMoneyException;
-import be.intecbrussel.gameshop.exception.TooYoungToGameException;
+import be.intecbrussel.gameshop.exception.*;
 
 import java.time.LocalDate;
 import java.util.Calendar;
@@ -22,22 +19,20 @@ public class GameShop {
         this.vendor = vendor;
     }
 
-    public void buyGame(Client client, String gameName) throws EmptyStockException, TooYoungToGameException, GameNotFoundException, NotEnoughMoneyException {
-        Game game =Game.valueOf(gameName);
+    public void buyGame(Client client, Game game) throws GameException {
         clientMoneyCheck(client, game);
         if(clientAgeCheck(client, game)){
             stock.soldGame(game);
         }
     }
 
-    private void clientMoneyCheck(Client client, Game game) throws NotEnoughMoneyException {
+    private void clientMoneyCheck(Client client, Game game) throws GameException {
         if (client.getMoney() < game.getPrice()) {
-            //System.out.println("Money: " + client.getMoney() +" --- Price: " +game.getPrice());
             throw new NotEnoughMoneyException("You have no enough money.");
         }
     }
 
-    private boolean clientAgeCheck(Client client, Game game) throws EmptyStockException, TooYoungToGameException, GameNotFoundException {
+    private boolean clientAgeCheck(Client client, Game game) throws GameException {
         int year = LocalDate.now().getYear();
         if (year - client.getBirthYear() < 18) {
             throw new TooYoungToGameException("You can not buy any game. Because you are too young");
