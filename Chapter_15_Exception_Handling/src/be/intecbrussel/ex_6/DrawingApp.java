@@ -8,44 +8,27 @@ public class DrawingApp {
 
         Drawing drawing = new Drawing();
 
-      for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 20; i++) {
             drawing.add(randomFillDrawingWithShapes());
         }
 
-      try {
-          for (Shape shape: drawing.getShapes()){
-              if(shape instanceof Circle){
-                  ((Circle) shape).setRadius(-5);
-              }
-              else if (shape instanceof Rectangle) {
-                  ((Rectangle) shape).setHeight(-10);
-              }
-              else {
-                  ((Triangle) shape).setHeight(-7);
-              }
-          }
-      } catch (NegativeSizeException e){
-          System.out.println(e.getMessage());
-          e.printStackTrace();
-      }
+        Drawing.DrawableIterator iterator = drawing.new DrawableIterator();
 
-
-
-
-
-
-       /* System.out.println(drawing);
-
-        drawing.add(new Circle(13));
-
-        System.out.println("Size: " + drawing.getSize());
-
-        drawing.remove(new Square(9));
-        System.out.println("Size after remove: " + drawing.getSize());
-        drawing.clear();
-        System.out.println("Size after clear: " + drawing.getSize());
-       */
-
+        try {
+            while (iterator.hasNext()) {
+                Shape shape = iterator.next();
+                if (shape instanceof Circle) {
+                    ((Circle) shape).setRadius(-5);
+                } else if (shape instanceof Rectangle) {
+                    ((Rectangle) shape).setHeight(-10);
+                } else {
+                    ((Triangle) shape).setHeight(-7);
+                }
+            }
+        } catch (NegativeSizeException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     public static Shape randomFillDrawingWithShapes() {
