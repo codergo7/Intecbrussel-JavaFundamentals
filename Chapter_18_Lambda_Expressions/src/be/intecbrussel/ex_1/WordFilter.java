@@ -1,7 +1,7 @@
 package be.intecbrussel.ex_1;
 
-//@FunctionalInterface
+@FunctionalInterface
 public interface WordFilter {
 
-    public boolean isValid(String s);
+    boolean isValid(String s);
 }
