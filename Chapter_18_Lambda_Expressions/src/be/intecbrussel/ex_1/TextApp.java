@@ -48,14 +48,12 @@ public class TextApp {
         System.out.println("\n*** Words containing two 'e' with lambda ***");
         tp.printFilteredWords(word ->{
             int amountOfE= 0;
-            for(String s1 :word.split("")){
-                if(s1.equals("e")){
+            for(char c :word.toCharArray()){
+                if(c=='e'){
                     amountOfE++;
                 }
             }
             return amountOfE==2;
         });
-
-
     }
 }
