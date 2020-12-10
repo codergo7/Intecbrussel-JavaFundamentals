@@ -1,6 +1,8 @@
-package be.intecbrussel.example;
+package be.intecbrussel.ex_2;
 
+import java.util.NoSuchElementException;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class IntStreamOperations {
 
@@ -57,5 +59,8 @@ public class IntStreamOperations {
         // sum range of integers from 1 to 10, exlusive
         System.out.printf("%nSum of integers from 1 to 9: %d%n",
                 IntStream.range(1,10).sum());
+
+        System.out.println(IntStream.of(values).summaryStatistics());
+
     }
 }
