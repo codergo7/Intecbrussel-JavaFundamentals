@@ -19,5 +19,7 @@ public class StreamDemo {
         IntStream.rangeClosed(1,100).forEach(i-> System.out.printf("%d ",i));
 
 
+
+
     }
 }
