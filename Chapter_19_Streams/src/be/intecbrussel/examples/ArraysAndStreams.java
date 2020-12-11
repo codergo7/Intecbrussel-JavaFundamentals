@@ -1,8 +1,11 @@
+// Examples of book of Deitel
 package be.intecbrussel.examples;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,6 +29,15 @@ public class ArraysAndStreams {
         // filter values greater than 4 then sort the results
         System.out.printf("Sorted values greater than 4: %s%n",
                 Arrays.stream(values).filter(i-> i>4).sorted().collect(Collectors.toList()));
+
+        // filter values greater than 4 then sort the results
+        System.out.printf("Sorted values greater than 4: %s%n",
+                Arrays.stream(values).filter(new Predicate<Integer>() {
+                    @Override
+                    public boolean test(Integer integer) {
+                        return integer>4;
+                    }
+                }).sorted().collect(Collectors.toList()));
 
         // greaterThan4 List sorted with streams
         System.out.printf("Values greater than 4 (ascending with streams): %s%n",
