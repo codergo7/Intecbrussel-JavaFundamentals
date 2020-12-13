@@ -9,6 +9,10 @@ public class Person {
     private float weight;
     private float height;
 
+    public Person() {
+        this(null,null,null,1,3,30);
+    }
+
     public Person(String name, String surname, String gender, int age, float weight, float height) {
         this.name = name;
         this.surname = surname;
