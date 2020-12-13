@@ -3,6 +3,7 @@
 package be.intecbrussel.examples;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -36,6 +37,19 @@ public class ArraysAndStreams2 {
                 Arrays.stream(strings)
                         .filter(s -> s.compareToIgnoreCase("n")<0)
                         .sorted(String.CASE_INSENSITIVE_ORDER.reversed())
+                        .collect(Collectors.toList()));
+
+        // strings less than "n" (case insensitive) sorted ascending
+        // using an anonymous class implements compare method of Comparator
+        System.out.printf("strings greater than m sorted ascending: %s%n",
+                Arrays.stream(strings)
+                        .filter(s -> s.compareToIgnoreCase("n")<0)
+                        .sorted(new Comparator<String>() {
+                            @Override
+                            public int compare(String o1, String o2) {
+                                return o1.compareTo(o2);
+                            }
+                        })
                         .collect(Collectors.toList()));
 
         // strings less than "n" (case insensitive) sorted descending

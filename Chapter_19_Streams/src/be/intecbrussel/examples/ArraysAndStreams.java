@@ -15,6 +15,9 @@ public class ArraysAndStreams {
 
         Integer[] values = {2, 9, 5, 0, 3, 7, 1, 4, 8, 6};
 
+        String[] strings = {"Red", "orange", "Yellow", "green", "Blue", "indigo", "Violet"};
+
+
         // display original values
         System.out.printf("Original values: %s%n", Arrays.asList(values));
 
