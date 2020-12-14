@@ -1,11 +1,10 @@
-package be.intecbrussel.ex_1;
+package be.intecbrussel.ex_1_List;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 
 public class Ex_2 {
@@ -15,6 +14,15 @@ public class Ex_2 {
         nextWithScanner(listStr);
 
         printListInReverseOrder(listStr);
+
+        listToArray(listStr);
+    }
+
+    private static void listToArray(List<String> listStr) {
+        String[]  strArr = listStr.toArray(String[]::new);
+        System.out.println("\n\n*** toArray ***");
+        Stream.of(strArr)
+                .forEach(s-> System.out.print(s + " "));
     }
 
     private static void printListInReverseOrder(List<String> listStr) {
@@ -22,9 +30,9 @@ public class Ex_2 {
                 .mapToObj(index->listStr.get(listStr.size()-index))
                 .forEach(s -> System.out.print(s + " "));
 
-        // Alternative
-        Collections.reverse(listStr);
-        listStr.forEach(s-> System.out.print(s+ " "));
+        // Alternative, but this modifies the original list although stream doesn't do this
+        //Collections.reverse(listStr);
+        //listStr.forEach(s-> System.out.print(s+ " "));
 
     }
 
