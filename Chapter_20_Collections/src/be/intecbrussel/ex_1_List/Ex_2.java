@@ -19,15 +19,15 @@ public class Ex_2 {
     }
 
     private static void listToArray(List<String> listStr) {
-        String[]  strArr = listStr.toArray(String[]::new);
+        String[] strArr = listStr.toArray(String[]::new);
         System.out.println("\n\n*** toArray ***");
         Stream.of(strArr)
-                .forEach(s-> System.out.print(s + " "));
+                .forEach(s -> System.out.print(s + " "));
     }
 
     private static void printListInReverseOrder(List<String> listStr) {
-        IntStream.rangeClosed(1,listStr.size())
-                .mapToObj(index->listStr.get(listStr.size()-index))
+        IntStream.rangeClosed(1, listStr.size())
+                .mapToObj(index -> listStr.get(listStr.size() - index))
                 .forEach(s -> System.out.print(s + " "));
 
         // Alternative, but this modifies the original list although stream doesn't do this
@@ -39,10 +39,11 @@ public class Ex_2 {
     private static void nextWithScanner(List<String> list) {
         Scanner scanner = new Scanner(System.in);
 
-        while(true){
+        while (true) {
+            System.out.println("Enter a word: ");
             String str = scanner.next();
             list.add(str);
-            if(str.endsWith(".")){
+            if (str.endsWith(".")) {
                 break;
             }
         }
