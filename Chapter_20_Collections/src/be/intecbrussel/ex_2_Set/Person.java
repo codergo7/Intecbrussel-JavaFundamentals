@@ -24,19 +24,6 @@ public class Person {
         this.height = height;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Person)) return false;
-        Person person = (Person) o;
-        return age == person.age && weight == person.weight && height == person.height && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(gender, person.gender);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstName, lastName, gender, age, weight, height);
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -83,6 +70,19 @@ public class Person {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return age == person.age && weight == person.weight && height == person.height && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && gender == person.gender;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, gender, age, weight, height);
     }
 
     @Override
