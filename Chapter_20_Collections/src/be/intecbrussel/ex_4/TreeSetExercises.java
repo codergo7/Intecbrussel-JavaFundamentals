@@ -1,8 +1,6 @@
 package be.intecbrussel.ex_4;
 
-import java.util.NavigableSet;
-import java.util.Random;
-import java.util.TreeSet;
+import java.util.*;
 
 public class TreeSetExercises {
 
@@ -10,8 +8,22 @@ public class TreeSetExercises {
 
         //integerTreeSet();
 
-        stringTreeSet();
+        //stringTreeSet();
 
+        stringTreeSetReversedOrder();
+    }
+
+    private static void stringTreeSetReversedOrder() {
+
+        String[] strings = StringListArray.fillTheArray();
+        SortedSet<String> integerNavigableSet = new TreeSet<>(Comparator.reverseOrder());
+        Random random = new Random();
+
+        for (int i = 0; i < 55; i++) {
+            integerNavigableSet.add(strings[random.nextInt(strings.length)]);
+        }
+        integerNavigableSet.first();
+        integerNavigableSet.forEach(s-> System.out.print(s + " "));
     }
 
     private static void stringTreeSet() {
@@ -23,10 +35,9 @@ public class TreeSetExercises {
         for (int i = 0; i < 55; i++) {
             integerNavigableSet.add(strings[random.nextInt(strings.length)]);
         }
+        integerNavigableSet.first();
         integerNavigableSet.forEach(s-> System.out.print(s + " "));
     }
-
-
 
     private static void integerTreeSet() {
         NavigableSet<Integer> integerNavigableSet = new TreeSet<>();
