@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_6;
+package be.intecbrussel.ex_06;
 
 public class PrinterAppLambda {
 

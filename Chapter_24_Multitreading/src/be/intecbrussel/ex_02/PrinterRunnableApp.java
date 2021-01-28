@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_2;
+package be.intecbrussel.ex_02;
 
 public class PrinterRunnableApp {
 

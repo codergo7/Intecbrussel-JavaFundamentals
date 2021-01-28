@@ -1,20 +1,15 @@
-package be.intecbrussel.ex_8;
+package be.intecbrussel.ex_07;
 
 public class Counter {
 
     private int count;
-    private Object object = new Object();
 
-    public synchronized void increment(){
-
+    public void increment(){
             count++;
-
     }
 
     public void decrement(){
-        synchronized (object){
             count--;
-        }
     }
 
     public int getCount() {

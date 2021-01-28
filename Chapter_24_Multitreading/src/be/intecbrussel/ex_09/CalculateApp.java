@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_9;
+package be.intecbrussel.ex_09;
 
 import java.util.Random;
 

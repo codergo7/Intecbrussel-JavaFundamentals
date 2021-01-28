@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_8;
+package be.intecbrussel.ex_07;
 
 public class CounterAppLambda {
 
@@ -18,9 +18,7 @@ public class CounterAppLambda {
             e.printStackTrace();
         }
 
-
         System.out.println(counter.getCount());
-
     }
 
     private static void  increment(Counter counter, int count) {

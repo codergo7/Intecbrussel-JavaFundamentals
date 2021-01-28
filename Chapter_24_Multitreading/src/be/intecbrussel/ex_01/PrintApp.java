@@ -1,4 +1,4 @@
-package be.intecbrussel.ex_1;
+package be.intecbrussel.ex_01;
 
 public class PrintApp {
 
