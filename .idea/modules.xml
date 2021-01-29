@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignment_Interface_17_11_2020/Assignment_Interface_17_11_2020.iml" filepath="$PROJECT_DIR$/Assignment_Interface_17_11_2020/Assignment_Interface_17_11_2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_05/Chapter_05.iml" filepath="$PROJECT_DIR$/Chapter_05/Chapter_05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_06_OOP/Chapter_06_OOP.iml" filepath="$PROJECT_DIR$/Chapter_06_OOP/Chapter_06_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_07_Arrays/Chapter_07_Arrays.iml" filepath="$PROJECT_DIR$/Chapter_07_Arrays/Chapter_07_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_08_Classes/Chapter_08_Classes.iml" filepath="$PROJECT_DIR$/Chapter_08_Classes/Chapter_08_Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_08_Methods/Chapter_08_Methods.iml" filepath="$PROJECT_DIR$/Chapter_08_Methods/Chapter_08_Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_09_ClassRelationships/Chapter_09_ClassRelationships.iml" filepath="$PROJECT_DIR$/Chapter_09_ClassRelationships/Chapter_09_ClassRelationships.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_10_Inheritance/Chapter_10_Inheritance.iml" filepath="$PROJECT_DIR$/Chapter_10_Inheritance/Chapter_10_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_11_Enumeration/Chapter_11_Enumeration.iml" filepath="$PROJECT_DIR$/Chapter_11_Enumeration/Chapter_11_Enumeration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_13_Interface/Chapter_13_Interface.iml" filepath="$PROJECT_DIR$/Chapter_13_Interface/Chapter_13_Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_14_NestedClass/Chapter_14_NestedClass.iml" filepath="$PROJECT_DIR$/Chapter_14_NestedClass/Chapter_14_NestedClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_15_Exception_Handling/Chapter_15_Exception_Handling.iml" filepath="$PROJECT_DIR$/Chapter_15_Exception_Handling/Chapter_15_Exception_Handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_16_Javadoc/Chapter_16_Javadoc.iml" filepath="$PROJECT_DIR$/Chapter_16_Javadoc/Chapter_16_Javadoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_17_Generics/Chapter_17_Generics.iml" filepath="$PROJECT_DIR$/Chapter_17_Generics/Chapter_17_Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_18_Lambda_Expressions/Chapter_18_Lambda_Expressions.iml" filepath="$PROJECT_DIR$/Chapter_18_Lambda_Expressions/Chapter_18_Lambda_Expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_19_Streams/Chapter_19_Streams.iml" filepath="$PROJECT_DIR$/Chapter_19_Streams/Chapter_19_Streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_20_Collections/Chapter_20_Collections.iml" filepath="$PROJECT_DIR$/Chapter_20_Collections/Chapter_20_Collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_21_File_IO/Chapter_21_File_IO.iml" filepath="$PROJECT_DIR$/Chapter_21_File_IO/Chapter_21_File_IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_24_Multitreading/Chapter_24_Multitreading.iml" filepath="$PROJECT_DIR$/Chapter_24_Multitreading/Chapter_24_Multitreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam_12_10_20/Exam_12_10_20.iml" filepath="$PROJECT_DIR$/Exam_12_10_20/Exam_12_10_20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam_26_10_20/Exam_26_10_20.iml" filepath="$PROJECT_DIR$/Exam_26_10_20/Exam_26_10_20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodShop/FoodShop.iml" filepath="$PROJECT_DIR$/FoodShop/FoodShop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Intecbrussel-JavaCodes.iml" filepath="$PROJECT_DIR$/.idea/Intecbrussel-JavaCodes.iml" />
+    </modules>
+  </component>
+</project>
